@@ -290,46 +290,46 @@ const floorPlansData = {
     slides: [
       [
         {
-          image: "./A_North_facing_3200.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3200 SQFT",
         },
         {
-          image: "./A_North_facing_3700.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3200 SQFT",
         },
         {
-          image: "./A_North_facing_3200.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3200 SQFT",
         },
       ],
       [
         {
-          image: "./A_North_facing_3700.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3700 SQFT",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=400&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3700 SQFT",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1560185127-d1e2dcf5e0e2?w=400&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3700 SQFT",
         },
       ],
     ],
     tableData: [
       {
-        type: "3-BHK",
-        sba: "3200 Sqft",
-        price: "₹2.8 Cr*",
+        type: "4-BHK",
+        sba: "3030 Sqft",
+        price: "₹2.5 Cr*",
         availability: "Limited",
       },
       {
-        type: "4-BHK",
-        sba: "3700 Sqft",
-        price: "₹3.4 Cr*",
+        type: "4.5-BHK",
+        sba: "3200 Sqft",
+        price: "₹2.7 Cr*",
         availability: "Limited",
       },
     ],
@@ -338,50 +338,44 @@ const floorPlansData = {
     slides: [
       [
         {
-          image: "./A_North_facing_3200.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3200 SQFT",
         },
         {
-          image: "./A_North_facing_3200.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3200 SQFT",
         },
         {
-          image: "./A_North_facing_3200.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3200 SQFT",
         },
       ],
       [
         {
-          image: "./A_North_facing_3200.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3700 SQFT",
         },
         {
-          image: "./A_North_facing_3200.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3700 SQFT",
         },
         {
-          image: "./A_North_facing_3200.webp",
+          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3700 SQFT",
         },
       ],
     ],
     tableData: [
       {
-        type: "3-BHK",
-        sba: "3200 Sqft",
-        price: "₹3.0 Cr*",
-        availability: "Available",
-      },
-      {
         type: "4-BHK",
-        sba: "3700 Sqft",
-        price: "₹3.6 Cr*",
-        availability: "Available",
+        sba: "3030 Sqft",
+        price: "₹2.5 Cr*",
+        availability: "Limited",
       },
       {
-        type: "5-BHK",
-        sba: "4200 Sqft",
-        price: "₹4.2 Cr*",
+        type: "4.5-BHK",
+        sba: "3200 Sqft",
+        price: "₹2.7 Cr*",
         availability: "Limited",
       },
     ],
@@ -549,41 +543,41 @@ document.getElementById("floorPlanSlider").addEventListener("touchend", () => {
 const galleryInteriorData = {
   north: [
     {
-      image: '././A_North_facing_3200.webp"',
+      image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D',
       title: "Living Room",
       description:
         "Spacious and modern living area with natural lighting and contemporary furnishing.",
     },
     {
-      image: './A_North_facing_3200.webp"',
+      image: 'https://images.unsplash.com/photo-1723110994499-df46435aa4b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D',
       title: "Dining Room",
       description:
         "Elegant dining space perfect for family gatherings and entertaining guests.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1556909019-f2c240d81b8f?w=1200&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
       title: "Master Bedroom",
       description:
         "Luxurious master suite with panoramic views and premium finishes.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1556909045-f23703c5767b?w=1200&h=800&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
       title: "Modern Kitchen",
       description:
         "State-of-the-art kitchen with high-end appliances and sleek design.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1556909116-6e0a3920b1f2?w=1200&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
       title: "Study Room",
       description:
         "Quiet and inspiring workspace with built-in storage and natural light.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1556909092-4ac1bb41e5c6?w=1200&h=800&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1680382578857-c331ead9ed51?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
       title: "Bathroom",
       description:
         "Spa-like bathroom with premium fixtures and modern amenities.",
@@ -592,42 +586,42 @@ const galleryInteriorData = {
   east: [
     {
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1600992045264-136a22de917e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
       title: "Grand Living Area",
       description:
         "Expansive living space with floor-to-ceiling windows and premium materials.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1556909045-f23703c5767b?w=1200&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1601760561441-16420502c7e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
       title: "Gourmet Kitchen",
       description:
         "Professional-grade kitchen with island seating and top-tier appliances.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1556909019-f2c240d81b8f?w=1200&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
       title: "Luxury Bedroom",
       description:
         "Serene bedroom retreat with walk-in closet and private balcony access.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1599809275695-5e96ca83bc43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
       title: "Entertainment Lounge",
       description:
         "Stylish entertainment area perfect for relaxation and social gatherings.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1556909116-6e0a3920b1f2?w=1200&h=800&fit=crop",
+        "https://images.unsplash.com/photo-1647579350413-a6ada4e480ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
       title: "Home Office",
       description:
         "Professional workspace with panoramic city views and modern technology.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1556909092-4ac1bb41e5c6?w=1200&h=800&fit=crop",
+        "https://plus.unsplash.com/premium_photo-1661876449499-26de7959878f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
       title: "Master Bath",
       description:
         "Resort-style bathroom with soaking tub and rain shower experience.",
@@ -921,58 +915,58 @@ document.getElementById("villas-date").setAttribute("min", today);
 // Property data
 const propData = {
   villaments: {
-    badge: "ECO LUXURY VILLAMENTS",
-    title: "Seek the lifestyle that<br>inspires your life choices",
+    badge: "LUXURY VILLAMENTS",
+    title: "Verde En Resplandor – Phase 3 Row Houses in Whitefield",
     description:
-      "Close to nature as it is to our hearts. Eco luxury villaments with a breathtaking forest view opening to the Turahalli Forest, the sustainable designs are guided by visionary biophilic architecture.",
+      "Step into a world where luxury embraces nature. With spacious layouts, elegant finishes, and serene surroundings, every home is a private sanctuary designed for those who seek sophistication and tranquility in equal measure. ",
     features: [
-      { label: "SPANNING", icon: "⚠️", value: "4.5 Acres" },
-      { label: "ADORNING", icon: "🌟", value: "250+ TREES" },
-      { label: "CENTRAL COURTYARD", icon: "✉️", value: "1 Acre" },
+      { label: "SPANNING", icon: "⚠️", value: "2.5 Acres" },
+      { label: "ADORNING", icon: "🌟", value: "100+ TREES" },
+      { label: "CENTRAL COURTYARD", icon: "✉️", value: "50,000 SqFt" },
       { label: "SECURED", icon: "🏆", value: "GATED COMMUNITY" },
     ],
     details: {
       top: [
-        { category: "EXCLUSIVE", icon: "✅", title: "108 Villaments" },
-        { category: "3 & 4 BHK", icon: "✅", title: "Duplex & Triplex" },
-        { category: "BUILTUP", icon: "✅", title: "3200 & 3700 Sqft" },
-        { category: "TRADITIONAL", icon: "✅", title: "Mud Block Designs" },
+        { category: "EXCLUSIVE", icon: "", title: "49 Villaments" },
+        { category: "4 BHK", icon: "", title: "Triplex" },
+        { category: "BUILTUP", icon: "", title: "3030 Sqft Onwards" },
+        { category: "TERRACE GARDEN", icon: "", title: "300 SQ. FT" },
       ],
       bottom: [
-        { category: "FRONTYARD GARDEN", icon: "✅", title: "210 SQ. FT." },
-        { category: "BACKYARD GARDEN", icon: "✅", title: "350 SQ. FT." },
-        { category: "TERRACE GARDEN", icon: "✅", title: "700 SQ. FT." },
-        { category: "COMMUNITY", icon: "✅", title: "Clubhouse" },
+        { category: "Community", icon: "", title: "Clubhouse" },
+        // { category: "BACKYARD GARDEN", icon: "", title: "350 SQ. FT." },
+        // { category: "TERRACE GARDEN", icon: "", title: "700 SQ. FT." },
+        // { category: "COMMUNITY", icon: "", title: "Clubhouse" },
       ],
     },
   },
   villas: {
-    badge: "PREMIUM LUXURY VILLAS",
-    title: "Experience unparalleled<br>luxury and sophistication",
+    badge: "LUXURY VILLAS",
+    title: "Trifecta Verde En Resplandor Villas – Phase 3 | 4 BHK Luxury Villas in Whitefield",
     description:
-      "Discover the pinnacle of luxury living with our exclusive collection of premium villas. Featuring contemporary architecture, private amenities, and breathtaking views that redefine modern elegance.",
+      "Experience the perfect harmony of luxury, elegance, and nature. Nestled in Budigere, Whitefield, these 4 BHK villas redefine upscale living with spacious layouts, modern aesthetics, lush gardens, and serene outdoor spaces — a private sanctuary for a truly elevated lifestyle.",
     features: [
-      { label: "SPANNING", icon: "🏠", value: "2.8 Acres" },
-      { label: "LANDSCAPING", icon: "🌳", value: "PREMIUM GARDENS" },
-      { label: "PRIVATE POOLS", icon: "🏊", value: "EACH VILLA" },
-      { label: "EXCLUSIVITY", icon: "👑", value: "LIMITED EDITION" },
+      { label: "SPANNING", icon: "🏠", value: "5.5 Acres" },
+      { label: "Adorning", icon: "🌳", value: "100+ TREES" },
+      { label: "Central Courtyard", icon: "🏊", value: "50,000 SqFt" },
+      { label: "Secured", icon: "👑", value: "GATED COMMUNITY" },
     ],
     details: {
       top: [
-        { category: "EXCLUSIVE", icon: "✅", title: "24 Premium Villas" },
-        { category: "4 & 5 BHK", icon: "✅", title: "Independent Villas" },
-        { category: "BUILTUP", icon: "✅", title: "4500 & 5200 Sqft" },
-        { category: "CONTEMPORARY", icon: "✅", title: "Modern Architecture" },
+        { category: "EXCLUSIVE", icon: "", title: "153 Villas" },
+        { category: "4 BHK", icon: "", title: "Triplex" },
+        { category: "Builtup", icon: "", title: "3530 Sqft Onwards" },
+        { category: "Terrace Garden", icon: "", title: "400 SQ. FT." },
       ],
       bottom: [
-        { category: "PRIVATE GARDEN", icon: "✅", title: "800 SQ. FT." },
-        { category: "SWIMMING POOL", icon: "✅", title: "Private Pool" },
-        { category: "ROOFTOP DECK", icon: "✅", title: "1200 SQ. FT." },
-        {
-          category: "LUXURY AMENITIES",
-          icon: "✅",
-          title: "Resort-Style Living",
-        },
+        { category: "Community", icon: "", title: "Clubhouse" },
+        // { category: "SWIMMING POOL", icon: "", title: "Private Pool" },
+        // { category: "ROOFTOP DECK", icon: "", title: "1200 SQ. FT." },
+        // {
+        //   category: "LUXURY AMENITIES",
+        //   icon: "",
+        //   title: "Resort-Style Living",
+        // },
       ],
     },
   },
@@ -1061,6 +1055,7 @@ function propRenderContent() {
                 ${detailsHTML}
             `;
 }
+
 
 function propToggleDetails() {
   propDetailsVisible = !propDetailsVisible;
