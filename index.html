@@ -13,15 +13,15 @@
 </head>
 <body>
     <nav class="navbar" id="navbar">
-        <div class="logo">GRAVITY ARANYA</div>
+        <div class="logo">Trifecta</div>
         <div class="menu">
             <a href="#">Overview</a>
-            <a href="#">Gallery</a>
-            <a href="#">Master Plan</a>
-            <a href="#">Location Advantage</a>
-            <a href="#">Contact Us</a>
+            <a href="#galleryInteriorShowcase">Gallery</a>
+            <a href="#masterplan">Master Plan</a>
+            <a href="#locationadvantages">Location Advantage</a>
+            <a href="#booking">Contact Us</a>
         </div>
-        <button class="btn">SCHEDULE A VISIT</button>
+        <a href="#booking" class="btn">SCHEDULE A VISIT</a>
     </nav>
     <div class="slider-container">
         <!-- Slide 1 -->
@@ -30,8 +30,8 @@
             <div class="slide-content">
                 <div class="content-wrapper">
                     <div class="hero-content">
-                        <h1 class="hero-title">Wake Up to Nature at Turahalli Forest's Edge</h1>
-                        <p class="hero-subtitle">3 & 4 BHK Forest Villaments in Bangalore - From ₹2.8 Cr</p>
+                        <h1 class="hero-title">Limited, Exclusive, Luxurious – Discover the lifestyle upgrade you’ve been waiting for with Trifecta Verde En Resplandor Row Homes Phase 3.</h1>
+                        <p class="hero-subtitle">4 BHK Villaments in Bangalore - From ₹2.5 Cr</p>
                         <div class="hero-buttons">
                             <button class="btn btn-primary">SCHEDULE A VISIT</button>
                             <button class="btn btn-secondary">GET BROCHURE & FLOOR PLANS INSTANTLY</button>
@@ -42,11 +42,11 @@
                                 <span>RERA Approved</span>
                             </div>
                             <div class="badge">
-                                <span>Only <strong>41</strong> Units Available</span>
+                                <span>Only <strong>49</strong> Units Available</span>
                             </div>
-                            <div class="badge">
+                            <!-- <div class="badge">
                                 <span>Ready by Q4 2025</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="form-container">
@@ -100,8 +100,8 @@
             <div class="slide-content">
                 <div class="content-wrapper">
                     <div class="hero-content">
-                        <h1 class="hero-title">Luxury Living in the Heart of Nature</h1>
-                        <p class="hero-subtitle">2 & 3 BHK Premium Apartments in Whitefield - From ₹1.5 Cr</p>
+                        <h1 class="hero-title">Crafted for the connoisseurs of fine living —  Phase 3 Villas at Trifecta Verde En Resplandor bring you unmatched privacy, space, and sophistication.</h1>
+                        <p class="hero-subtitle">4 BHK Villas in Bangalore - From ₹3.5 Cr</p>
                         <div class="hero-buttons">
                             <button class="btn btn-primary">BOOK SITE VISIT</button>
                             <button class="btn btn-secondary">DOWNLOAD PRICE LIST</button>
@@ -112,11 +112,11 @@
                                 <span>RERA Approved</span>
                             </div>
                             <div class="badge">
-                                <span>Only <strong>28</strong> Units Available</span>
+                                <span>Only <strong>50</strong> Units Available</span>
                             </div>
-                            <div class="badge">
+                            <!-- <div class="badge">
                                 <span>Ready by Q2 2026</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="form-container">
@@ -198,7 +198,7 @@
         </div>
     </section>
     
- <div class="gallery-interior-showcase">
+ <div class="gallery-interior-showcase" id="galleryInteriorShowcase">
         <div class="gallery-showcase-header">
             <h1 class="gallery-showcase-title">Interior Showcase</h1>
             <div class="gallery-face-toggle">
@@ -224,7 +224,7 @@
     </div>
     
 
-     <div class="masterplan-section">
+     <div class="masterplan-section" id="masterplan">
         <div class="section-header">
             <h1 class="section-title">Masterplan</h1>
             <p class="section-subtitle">Discover our thoughtfully designed community spaces and premium amenities</p>
@@ -391,13 +391,14 @@
 
 
 
-    <section class="la-location-advantages">
+    <section class="la-location-advantages" id="locationadvantages">
     <h2 class="la-section-title">Location Advantages</h2>
     
     <div class="la-content-wrapper">
       <!-- Map Section -->
       <div class="la-map-container">
-        <img src="./A_East_facing_3200.webp" alt="map" class="la-map-image">
+        <img src="https://images.unsplash.com/photo-1568137223448-0708e0e4779c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fGxvY2F0aW9uJTIwbWFwfGVufDB8fDB8fHww" alt="map" class="la-map-image">
+        
       </div>
 
       <!-- Amenities Section -->
@@ -520,7 +521,7 @@
 
 
 
-  <div class="booking-container">
+  <div class="booking-container" id="booking">
     <div class="booking-header-section">
       <div class="booking-property-toggle">
         <button class="booking-toggle-btn active" onclick="showProperty(event, 'villaments')">Villaments</button>
@@ -534,6 +535,7 @@
       <div class="booking-content-wrapper">
         <div class="booking-map-section">
           <iframe 
+          style="height: 100%;"
             class="booking-map-container"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8413168347757!2d77.6413!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0x f4778e7f0b0b2b1a!2sBengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
             allowfullscreen="" 
@@ -542,7 +544,7 @@
           </iframe>
         </div>
         <div class="booking-form-section">
-          <div class="booking-location-badge">Bengaluru Central</div>
+          <div class="booking-location-badge"></div>
           <form id="villamentsForm" onsubmit="submitVillamentsForm(event)">
             <div class="booking-form-group">
               <label class="booking-form-label">Your Name</label>
@@ -595,6 +597,7 @@
       <div class="booking-content-wrapper">
         <div class="booking-map-section">
           <iframe 
+          style="height: 100%;"
             class="booking-map-container"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6541234567890!2d77.5945!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1583c9b44e6d%3A0x f4778e7f0b0b2b1a!2sWhitefield%2C+Bengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v0987654321"
             allowfullscreen="" 
@@ -603,7 +606,7 @@
           </iframe>
         </div>
         <div class="booking-form-section">
-          <div class="booking-location-badge">Whitefield Tech Park</div>
+          <div class="booking-location-badge"></div>
           <form id="villasForm" onsubmit="submitVillasForm(event)">
             <div class="booking-form-group">
               <label class="booking-form-label">Your Name</label>
@@ -664,15 +667,16 @@
       <div class="footer-col">
         <h3>Address</h3>
         <p>
-          235/12, 27th Cross Rd, 7th Block <br>
-          Jayanagar, Bengaluru 560070
+          Trifecta Projects Pvt. Ltd. <br>
+            Trifecta Adatto, 11th Floor, Site No. 66/2. <br>
+            67/1.  Whitefield Main Road, Garudacharpalya, Mahadevpura Post, Bangalore 560048
         </p>
       </div>
 
       <!-- Logo -->
       <div class="footer-logo">
-        <p style="letter-spacing:3px; font-weight:500;">GRAVITY</p>
-        <h2>ARANYA</h2>
+        <!-- <p style="letter-spacing:3px; font-weight:500;">Trifecta</p> -->
+        <h2>Trifecta</h2>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -683,15 +687,18 @@
 
       <!-- Contact -->
       <div class="footer-col">
-        <h3>Contact Us</h3>
-        <p>T. +91 95131 45554</p>
-        <p>M. <a href="mailto:marketing@gravityhomes.in">marketing@gravityhomes.in</a></p>
+        <h3>Sales & Marketing</h3>
+        <p>+(91) 808 800 4411</p>
+        <p>Others: +(91) 895 105 2233</p>
+        <p>Enquiry: <a href="mailto:enquiry@trifectaprojects.com">enquiry@trifectaprojects.com</a></p>
+        <p>Email: <a href="mailto:enquiry@info@trifectaprojects.com">info@trifectaprojects.com</a></p>
       </div>
     </div>
 
     <!-- Disclaimer -->
     <div class="footer-disclaimer">
-      RERA NO. PRM/KA/RERA/1251/310/PR/080922/005224 <br>
+      RERA - PRM/KA/RERA/1251/446/PR/060424/006778<br>
+      RERA - PRM/KA/RERA/1251/446/PR/230125/007422<br>
       Disclaimer: Any content mentioned on this website is for information purposes only and 
       prices are subject to change without notice. This website is just for the purpose of 
       information only and not to be considered as an official website.
