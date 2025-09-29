@@ -1,20 +1,45 @@
 // navbar section
 
+// Scroll Effect
 let lastScroll = 0;
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
   let currentScroll = window.pageYOffset;
 
-  if (currentScroll < lastScroll) {
-    // Scrolling Up → Expand Navbar
+  if (currentScroll < lastScroll && currentScroll > 100) {
     navbar.classList.add("expanded");
   } else {
-    // Scrolling Down → Normal Navbar
     navbar.classList.remove("expanded");
   }
 
   lastScroll = currentScroll;
+});
+
+// Mobile Menu Toggle
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("active");
+});
+
+// Close menu when clicking on a link
+const menuLinks = menu.querySelectorAll("a");
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    menu.classList.remove("active");
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (e) => {
+  if (!navbar.contains(e.target)) {
+    hamburger.classList.remove("active");
+    menu.classList.remove("active");
+  }
 });
 
 // hero section
@@ -255,6 +280,8 @@ window.addEventListener("load", () => {
 
 // master plan script
 
+// master plan script
+
 function openModal(modalId) {
   document.getElementById(modalId).style.display = "block";
   document.body.style.overflow = "hidden";
@@ -265,13 +292,13 @@ function closeModal(modalId) {
   document.body.style.overflow = "auto";
 }
 
-// Close modal when clicking outside the image
-window.onclick = function (event) {
+// Close modal when clicking outside the image - USE ADDEVENTLISTENER
+window.addEventListener("click", function (event) {
   if (event.target.classList.contains("modal")) {
     event.target.style.display = "none";
     document.body.style.overflow = "auto";
   }
-};
+});
 
 // Close modal with escape key
 document.addEventListener("keydown", function (event) {
@@ -290,21 +317,25 @@ const floorPlansData = {
     slides: [
       [
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3200 SQFT",
         },
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3200 SQFT",
         },
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3200 SQFT",
         },
       ],
       [
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "North Facing - 3700 SQFT",
         },
         {
@@ -338,29 +369,35 @@ const floorPlansData = {
     slides: [
       [
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3200 SQFT",
         },
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3200 SQFT",
         },
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3200 SQFT",
         },
       ],
       [
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3700 SQFT",
         },
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3700 SQFT",
         },
         {
-          image: "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+          image:
+            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
           title: "East Facing - 3700 SQFT",
         },
       ],
@@ -370,6 +407,12 @@ const floorPlansData = {
         type: "4-BHK",
         sba: "3030 Sqft",
         price: "₹2.5 Cr*",
+        availability: "Limited",
+      },
+      {
+        type: "4.5-BHK",
+        sba: "3200 Sqft",
+        price: "₹2.7 Cr*",
         availability: "Limited",
       },
       {
@@ -425,10 +468,10 @@ function renderFloorPlanTable() {
     .map(
       (row) =>
         `<div class="table-row">
-                    <div class="table-cell">${row.type}</div>
-                    <div class="table-cell">${row.sba}</div>
-                    <div class="table-cell">${row.price}</div>
-                    <div class="table-cell">${row.availability}</div>
+                    <div class="table-cell" data-label="Type">${row.type}</div>
+                    <div class="table-cell" data-label="SBA">${row.sba}</div>
+                    <div class="table-cell" data-label="Price">${row.price}</div>
+                    <div class="table-cell" data-label="Availability">${row.availability}</div>
                 </div>`
     )
     .join("");
@@ -543,13 +586,15 @@ document.getElementById("floorPlanSlider").addEventListener("touchend", () => {
 const galleryInteriorData = {
   north: [
     {
-      image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D',
+      image:
+        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
       title: "Living Room",
       description:
         "Spacious and modern living area with natural lighting and contemporary furnishing.",
     },
     {
-      image: 'https://images.unsplash.com/photo-1723110994499-df46435aa4b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D',
+      image:
+        "https://images.unsplash.com/photo-1723110994499-df46435aa4b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
       title: "Dining Room",
       description:
         "Elegant dining space perfect for family gatherings and entertaining guests.",
@@ -915,7 +960,6 @@ document.getElementById("villas-date").setAttribute("min", today);
 // Property data
 const propData = {
   villaments: {
-    badge: "LUXURY VILLAMENTS",
     title: "Verde En Resplandor – Phase 3 Row Houses in Whitefield",
     description:
       "Step into a world where luxury embraces nature. With spacious layouts, elegant finishes, and serene surroundings, every home is a private sanctuary designed for those who seek sophistication and tranquility in equal measure. ",
@@ -941,8 +985,8 @@ const propData = {
     },
   },
   villas: {
-    badge: "LUXURY VILLAS",
-    title: "Trifecta Verde En Resplandor Villas – Phase 3 | 4 BHK Luxury Villas in Whitefield",
+    title:
+      "Trifecta Verde En Resplandor Villas – Phase 3 | 4 BHK Luxury Villas in Whitefield",
     description:
       "Experience the perfect harmony of luxury, elegance, and nature. Nestled in Budigere, Whitefield, these 4 BHK villas redefine upscale living with spacious layouts, modern aesthetics, lush gardens, and serene outdoor spaces — a private sanctuary for a truly elevated lifestyle.",
     features: [
@@ -1024,7 +1068,6 @@ function propRenderContent() {
     : "";
 
   contentArea.innerHTML = `
-                <div class="prop-badge">${data.badge}</div>
                 
                 <h1 class="prop-main-title">${data.title}</h1>
                 
@@ -1055,7 +1098,6 @@ function propRenderContent() {
                 ${detailsHTML}
             `;
 }
-
 
 function propToggleDetails() {
   propDetailsVisible = !propDetailsVisible;
