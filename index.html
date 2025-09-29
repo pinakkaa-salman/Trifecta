@@ -14,14 +14,21 @@
 <body>
     <nav class="navbar" id="navbar">
         <div class="logo">Trifecta</div>
-        <div class="menu">
-            <a href="#">Overview</a>
+        
+        <div class="menu" id="menu">
+            <a href="#overview">Overview</a>
             <a href="#galleryInteriorShowcase">Gallery</a>
             <a href="#masterplan">Master Plan</a>
             <a href="#locationadvantages">Location Advantage</a>
             <a href="#booking">Contact Us</a>
+            <a href="#booking" class="btn">SCHEDULE A VISIT</a>
         </div>
-        <a href="#booking" class="btn">SCHEDULE A VISIT</a>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
     <div class="slider-container">
         <!-- Slide 1 -->
@@ -184,10 +191,10 @@
             <!-- Toggle Buttons at Top -->
             <div class="prop-toggle-buttons">
                 <button class="prop-toggle-btn prop-active" onclick="propShowContent('villaments')">
-                    Villaments
+                   Luxury Villaments
                 </button>
                 <button class="prop-toggle-btn" onclick="propShowContent('villas')">
-                    Villas
+                    Luxury Villas
                 </button>
             </div>
 
@@ -200,10 +207,10 @@
     
  <div class="gallery-interior-showcase" id="galleryInteriorShowcase">
         <div class="gallery-showcase-header">
-            <h1 class="gallery-showcase-title">Interior Showcase</h1>
+            <h1 class="gallery-showcase-title">GALLERY</h1>
             <div class="gallery-face-toggle">
-                <button class="gallery-face-btn gallery-active" data-gallery-face="north">North Face</button>
-                <button class="gallery-face-btn" data-gallery-face="east">East Face</button>
+                <button class="gallery-face-btn gallery-active" data-gallery-face="north">VILLAMENTS</button>
+                <button class="gallery-face-btn" data-gallery-face="east">VILLAS</button>
             </div>
         </div>
 
@@ -237,7 +244,7 @@
                 <div class="overlay">
                     <span class="view-text">View</span>
                 </div>
-                <h3 class="masterplan-title">Site Layout Plan</h3>
+                <h3 class="masterplan-title">VILLAMENTS</h3>
             </div>
 
             <div class="masterplan-item" onclick="openModal('modal2')">
@@ -246,7 +253,7 @@
                 <div class="overlay">
                     <span class="view-text">View</span>
                 </div>
-                <h3 class="masterplan-title">Landscape Master Plan</h3>
+                <h3 class="masterplan-title">VILLAS</h3>
             </div>
         </div>
 
@@ -337,6 +344,25 @@
 
         </div>
     </div>
+    <!-- Modal 1 - Add this NEW code -->
+    <div id="modal1" class="modal">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="modal-content">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                alt="Site Layout Plan" class="modal-image">
+            <h2 class="modal-title">Site Layout Plan</h2>
+        </div>
+    </div>
+
+    <!-- Modal 2 - Add this NEW code -->
+    <div id="modal2" class="modal">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <div class="modal-content">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Landscape Master Plan" class="modal-image">
+            <h2 class="modal-title">Landscape Master Plan</h2>
+        </div>
+    </div>
 
 
 
@@ -345,11 +371,11 @@
             <span>Discover plans</span>
         </div>
 
-        <h1 class="main-title">Floor Plans</h1>
+        <h1 class="main-title">FLOOR PLANS</h1>
 
         <div class="facing-buttons">
-            <button class="facing-btn active" data-facing="north">North Facing</button>
-            <button class="facing-btn" data-facing="east">East Facing</button>
+            <button class="facing-btn active" data-facing="north">VILLAMENTS</button>
+            <button class="facing-btn" data-facing="east">VILLAS</button>
         </div>
 
         <div class="floor-plan-slider-container">
@@ -397,7 +423,7 @@
     <div class="la-content-wrapper">
       <!-- Map Section -->
       <div class="la-map-container">
-        <img src="https://images.unsplash.com/photo-1568137223448-0708e0e4779c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fGxvY2F0aW9uJTIwbWFwfGVufDB8fDB8fHww" alt="map" class="la-map-image">
+        <!-- <img src="https://images.unsplash.com/photo-1568137223448-0708e0e4779c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fGxvY2F0aW9uJTIwbWFwfGVufDB8fDB8fHww" alt="map" class="la-map-image"> -->
         
       </div>
 
@@ -572,17 +598,17 @@
                 <input type="date" id="villaments-date" class="booking-form-input booking-date-input" value="2025-09-26" required>
                 <select id="villaments-time" class="booking-form-input booking-time-input" required>
                   <option value="">Select Time</option>
-                  <option value="08:00">08:00 AM</option>
-                  <option value="09:00">09:00 AM</option>
-                  <option value="10:00">10:00 AM</option>
-                  <option value="11:00">11:00 AM</option>
-                  <option value="12:00">12:00 PM</option>
-                  <option value="13:00">01:00 PM</option>
-                  <option value="14:00">02:00 PM</option>
-                  <option value="15:00">03:00 PM</option>
-                  <option value="16:00">04:00 PM</option>
-                  <option value="17:00">05:00 PM</option>
-                  <option value="18:00">06:00 PM</option>
+                  <option value="08:00" style="color: black;">08:00 AM</option>
+                  <option value="09:00" style="color: black;">09:00 AM</option>
+                  <option value="10:00" style="color: black;">10:00 AM</option>
+                  <option value="11:00" style="color: black;">11:00 AM</option>
+                  <option value="12:00" style="color: black;">12:00 PM</option>
+                  <option value="13:00" style="color: black;">01:00 PM</option>
+                  <option value="14:00" style="color: black;">02:00 PM</option>
+                  <option value="15:00" style="color: black;">03:00 PM</option>
+                  <option value="16:00" style="color: black;">04:00 PM</option>
+                  <option value="17:00" style="color: black;">05:00 PM</option>
+                  <option value="18:00" style="color: black;">06:00 PM</option>
                 </select>
               </div>
             </div>
@@ -634,17 +660,17 @@
                 <input type="date" id="villas-date" class="booking-form-input booking-date-input" value="2025-09-26" required>
                 <select id="villas-time" class="booking-form-input booking-time-input" required>
                   <option value="">Select Time</option>
-                  <option value="08:00">08:00 AM</option>
-                  <option value="09:00">09:00 AM</option>
-                  <option value="10:00">10:00 AM</option>
-                  <option value="11:00">11:00 AM</option>
-                  <option value="12:00">12:00 PM</option>
-                  <option value="13:00">01:00 PM</option>
-                  <option value="14:00">02:00 PM</option>
-                  <option value="15:00">03:00 PM</option>
-                  <option value="16:00">04:00 PM</option>
-                  <option value="17:00">05:00 PM</option>
-                  <option value="18:00">06:00 PM</option>
+                  <option value="08:00" style="color: black;">08:00 AM</option>
+                  <option value="09:00" style="color: black;">09:00 AM</option>
+                  <option value="10:00" style="color: black;">10:00 AM</option>
+                  <option value="11:00" style="color: black;">11:00 AM</option>
+                  <option value="12:00" style="color: black;">12:00 PM</option>
+                  <option value="13:00" style="color: black;">01:00 PM</option>
+                  <option value="14:00" style="color: black;">02:00 PM</option>
+                  <option value="15:00" style="color: black;">03:00 PM</option>
+                  <option value="16:00" style="color: black;">04:00 PM</option>
+                  <option value="17:00" style="color: black;">05:00 PM</option>
+                  <option value="18:00" style="color: black;">06:00 PM</option>
                 </select>
               </div>
             </div>
@@ -706,7 +732,7 @@
 
     <!-- Bottom -->
     <div class="footer-bottom">
-      Copyright 2025 – Project by Gravity Homes
+      Copyright 2025 - Project by TRIFECTA
     </div>
 </footer>
 
