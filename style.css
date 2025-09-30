@@ -271,7 +271,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -337,7 +337,7 @@ body {
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 
@@ -684,6 +684,7 @@ body {
   .btn {
     /* width: 280px; */
     max-width: 100%;
+    background-color: #E55A2B;
   }
 
   .property-badges {
@@ -1468,6 +1469,7 @@ body {
 
             .mp-points-section {
                 padding: 0 10px;
+                display: none;
             }
 
             .mp-points-grid {
@@ -2372,7 +2374,7 @@ footer {
 }
 
 .footer-col {
-  flex: 1 1 250px;
+  /* flex: 1 1 250px; */
   min-width: 220px;
 }
 
@@ -2693,5 +2695,28 @@ footer {
   .popup-form .country-code {
     flex: none;
     width: 100%;
+  }
+  .mp-image{
+    height: 40vh;
+  }
+  .slide1-bg{
+    background-image: url(./images/Website\ Villa\ Offer\ Creative.jpg);
+  }
+  .slide2-bg{
+    background-image: url(./images/Website\ Villa\ Offer\ Creative.jpg);
+  }
+  .slide-background{
+    margin-top: 0rem;
+  }
+  .hero-title{
+    background-color: #00000069;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+  .hero-subtitle{
+    background-color: #00000069;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
   }
 }
