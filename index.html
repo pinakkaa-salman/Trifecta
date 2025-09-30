@@ -43,7 +43,7 @@
                         <p class="hero-subtitle">4 BHK Rowhomes  in Bangalore - From ₹2.5 Cr</p>
                         <div class="hero-buttons">
                             <a href="#booking" class="btn btn-primary">SCHEDULE A VISIT</a>
-                            <button class="btn btn-secondary">GET BROCHURE & FLOOR PLANS INSTANTLY</button>
+                            <a href="#" class="btn btn-secondary" onclick="openBrochurePopup(); return false;">GET BROCHURE & FLOOR PLANS INSTANTLY</a>
                         </div>
                         <div class="property-badges">
                             <div class="badge">
@@ -113,7 +113,7 @@
                         <p class="hero-subtitle">4 BHK Villas in Bangalore - From ₹3.5 Cr</p>
                         <div class="hero-buttons">
                             <a href="#booking" class="btn btn-primary">BOOK SITE VISIT</a>
-                            <button class="btn btn-secondary">DOWNLOAD PRICE LIST</button>
+                            <a href="#"  class="btn btn-secondary" onclick="openBrochurePopup(); return false;">DOWNLOAD PRICE LIST</a>
                         </div>
                         <div class="property-badges">
                             <div class="badge">
@@ -497,7 +497,7 @@
                 </div>
             </div>
 
-            <button class="get-pricing-btn">GET DETAILED PRICING</button>
+            <a href="#" class="get-pricing-btn" onclick="openBrochurePopup(); return false;" style="text-decoration: none;">GET DETAILED PRICING</a>
         </div>
     </div>
 
@@ -826,7 +826,52 @@
     </div>
 </footer>
 
-
+<div class="popup-overlay" id="brochurePopup">
+  <div class="popup-container">
+    <button class="popup-close" onclick="closeBrochurePopup()">&times;</button>
+    <form class="popup-form" id="brochureDownloadForm" onsubmit="handleBrochureSubmit(event)">
+      <h3>Download Brochure & Floor Plans</h3>
+      
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      
+      <div class="form-group">
+        <div class="phone-input">
+          <select class="country-code">
+            <option value="+91">(IN) +91</option>
+            <option value="+1">(US) +1</option>
+            <option value="+44">(UK) +44</option>
+          </select>
+          <input type="tel" placeholder="Your Mobile" required>
+        </div>
+      </div>
+      
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" checked>
+          <span class="checkmark"></span>
+          I agree to receive updates via WhatsApp & Email.
+        </label>
+      </div>
+      
+      <div class="form-group">
+        <select required>
+          <option value="">Select Property Type</option>
+          <option value="rowhomes">4 BHK Rowhomes</option>
+          <option value="villas">4 BHK Villas</option>
+          <option value="both">Both Properties</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn btn-form">Download Now</button>
+    </form>
+  </div>
+</div>
     <script src="./script.js"></script>
 </body>
 </html>

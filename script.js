@@ -1105,3 +1105,77 @@ function propToggleDetails() {
 document.addEventListener("DOMContentLoaded", function () {
   propRenderContent();
 });
+
+
+
+
+
+// Open Brochure Popup
+function openBrochurePopup() {
+  const popup = document.getElementById('brochurePopup');
+  popup.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Close Brochure Popup
+function closeBrochurePopup() {
+  const popup = document.getElementById('brochurePopup');
+  popup.classList.remove('active');
+  document.body.style.overflow = ''; // Restore scrolling
+}
+
+// Close popup when clicking outside
+document.getElementById('brochurePopup').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeBrochurePopup();
+  }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeBrochurePopup();
+  }
+});
+
+// Handle Form Submission
+function handleBrochureSubmit(event) {
+  event.preventDefault();
+  
+  const form = document.getElementById('brochureDownloadForm');
+  const formData = {
+    name: form.querySelector('input[type="text"]').value,
+    email: form.querySelector('input[type="email"]').value,
+    phone: form.querySelector('input[type="tel"]').value,
+    countryCode: form.querySelector('.country-code').value,
+    propertyType: form.querySelector('select').value,
+    agreeToUpdates: form.querySelector('input[type="checkbox"]').checked,
+    timestamp: new Date().toISOString(),
+    formType: 'brochure_download'
+  };
+
+  // Log the data (you can send this to your backend later)
+  console.log('Brochure Download Form Data:', formData);
+
+  // Show success message
+  const submitBtn = form.querySelector('.btn-form');
+  const originalText = submitBtn.textContent;
+  
+  submitBtn.textContent = ' submitting...';
+  submitBtn.style.backgroundColor = '#4ade80';
+  submitBtn.disabled = true;
+
+  // Simulate download and reset
+  setTimeout(() => {
+    submitBtn.textContent = '✓  Successful!';
+    
+    setTimeout(() => {
+      closeBrochurePopup();
+      form.reset();
+      form.querySelector('input[type="checkbox"]').checked = true;
+      submitBtn.textContent = originalText;
+      submitBtn.style.backgroundColor = '#ff6b35';
+      submitBtn.disabled = false;
+    }, 2000);
+  }, 1500);
+}
