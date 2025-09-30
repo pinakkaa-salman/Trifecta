@@ -13,7 +13,9 @@
 </head>
 <body>
     <nav class="navbar" id="navbar">
-        <div class="logo">Trifecta</div>
+        <div class="logo">
+            <img src="./icons/Trifecta-1080x1080-RGB-Logo-Transparency.png" alt="" class="logo">
+        </div>
         
         <div class="menu" id="menu">
             <a href="#overview">Overview</a>
@@ -37,10 +39,10 @@
             <div class="slide-content">
                 <div class="content-wrapper">
                     <div class="hero-content">
-                        <h1 class="hero-title">Limited, Exclusive, Luxurious – Discover the lifestyle upgrade you’ve been waiting for with Trifecta Verde En Resplandor Row Homes Phase 3.</h1>
-                        <p class="hero-subtitle">4 BHK Villaments in Bangalore - From ₹2.5 Cr</p>
+                        <h1 class="hero-title">Limited, Exclusive, Luxurious – Trifecta Verde En Resplandor Row Homes Phase 3.</h1>
+                        <p class="hero-subtitle">4 BHK Rowhomes  in Bangalore - From ₹2.5 Cr</p>
                         <div class="hero-buttons">
-                            <button class="btn btn-primary">SCHEDULE A VISIT</button>
+                            <a href="#booking" class="btn btn-primary">SCHEDULE A VISIT</a>
                             <button class="btn btn-secondary">GET BROCHURE & FLOOR PLANS INSTANTLY</button>
                         </div>
                         <div class="property-badges">
@@ -107,10 +109,10 @@
             <div class="slide-content">
                 <div class="content-wrapper">
                     <div class="hero-content">
-                        <h1 class="hero-title">Crafted for the connoisseurs of fine living —  Phase 3 Villas at Trifecta Verde En Resplandor bring you unmatched privacy, space, and sophistication.</h1>
+                        <h1 class="hero-title">Crafted for the connoisseurs of fine living —  Phase 3 Villas at Trifecta Verde En Resplandor </h1>
                         <p class="hero-subtitle">4 BHK Villas in Bangalore - From ₹3.5 Cr</p>
                         <div class="hero-buttons">
-                            <button class="btn btn-primary">BOOK SITE VISIT</button>
+                            <a href="#booking" class="btn btn-primary">BOOK SITE VISIT</a>
                             <button class="btn btn-secondary">DOWNLOAD PRICE LIST</button>
                         </div>
                         <div class="property-badges">
@@ -190,11 +192,12 @@
         <div class="prop-container">
             <!-- Toggle Buttons at Top -->
             <div class="prop-toggle-buttons">
-                <button class="prop-toggle-btn prop-active" onclick="propShowContent('villaments')">
-                   Luxury Villaments
-                </button>
+                
                 <button class="prop-toggle-btn" onclick="propShowContent('villas')">
                     Luxury Villas
+                </button>
+                <button class="prop-toggle-btn prop-active" onclick="propShowContent('villaments')">
+                   Luxury Rowhomes 
                 </button>
             </div>
 
@@ -209,8 +212,8 @@
         <div class="gallery-showcase-header">
             <h1 class="gallery-showcase-title">GALLERY</h1>
             <div class="gallery-face-toggle">
-                <button class="gallery-face-btn gallery-active" data-gallery-face="north">VILLAMENTS</button>
                 <button class="gallery-face-btn" data-gallery-face="east">VILLAS</button>
+                <button class="gallery-face-btn gallery-active" data-gallery-face="north">ROWHOMES</button>
             </div>
         </div>
 
@@ -231,138 +234,225 @@
     </div>
     
 
-     <div class="masterplan-section" id="masterplan">
-        <div class="section-header">
-            <h1 class="section-title">Masterplan</h1>
-            <p class="section-subtitle">Discover our thoughtfully designed community spaces and premium amenities</p>
-        </div>
 
-        <div class="masterplan-grid">
-            <div class="masterplan-item" onclick="openModal('modal1')">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                    alt="Site Layout Plan" class="masterplan-image">
-                <div class="overlay">
-                    <span class="view-text">View</span>
-                </div>
-                <h3 class="masterplan-title">VILLAMENTS</h3>
-            </div>
 
-            <div class="masterplan-item" onclick="openModal('modal2')">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                    alt="Landscape Master Plan" class="masterplan-image">
-                <div class="overlay">
-                    <span class="view-text">View</span>
-                </div>
-                <h3 class="masterplan-title">VILLAS</h3>
+    <div class="mp-container">
+        <div class="mp-header">
+            <h1 class="mp-title">Masterplan</h1>
+            <div class="mp-toggle-buttons">
+                <button class="mp-toggle-btn mp-active" onclick="mpShowPlan('villas')">
+                    Villas
+                </button>
+                <button class="mp-toggle-btn" onclick="mpShowPlan('rowhomes')">
+                    RowHomes
+                </button>
             </div>
         </div>
 
-        <div class="amenities-section">
-            <div class="amenity-category">
-                <h3 class="category-title">Banyan Grove</h3>
-                <div class="amenity-item">
-                    <div class="amenity-number">1</div>
-                    <div class="amenity-name">Mini Amphitheatre</div>
+        <div class="mp-content">
+            <!-- Villas Plan -->
+            <div id="mp-villas" class="mp-plan-view mp-active">
+                <div class="mp-image-container">
+                    <img src="./images/master plan.webp" 
+                         alt="Villas Masterplan" 
+                         class="mp-image">
                 </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">2</div>
-                    <div class="amenity-name">Outdoor Performance</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">3</div>
-                    <div class="amenity-name">Open Sit Outs</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">4</div>
-                    <div class="amenity-name">Lotus Pond</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">5</div>
-                    <div class="amenity-name">Kids Play Area</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">6</div>
-                    <div class="amenity-name">Cricket Pitch</div>
+
+                <div class="mp-points-section">
+                    <div class="mp-points-grid">
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">1</div>
+                            <div class="mp-point-name">Mini Amphitheatre</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">2</div>
+                            <div class="mp-point-name">Outdoor Performance</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">3</div>
+                            <div class="mp-point-name">Open Sits Outs</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">4</div>
+                            <div class="mp-point-name">Lotus Pond</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">5</div>
+                            <div class="mp-point-name">Kids Play Area</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">6</div>
+                            <div class="mp-point-name">Cricket Pitch</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">7</div>
+                            <div class="mp-point-name">Reception</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">8</div>
+                            <div class="mp-point-name">Senior Park</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">9</div>
+                            <div class="mp-point-name">Sand Pitz</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">10</div>
+                            <div class="mp-point-name">Clubhouse</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">11</div>
+                            <div class="mp-point-name">Gathering Space</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">12</div>
+                            <div class="mp-point-name">Fountain Plaza</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">13</div>
+                            <div class="mp-point-name">Heb Garden</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">14</div>
+                            <div class="mp-point-name">Open Ground</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">15</div>
+                            <div class="mp-point-name">Waterbody</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">16</div>
+                            <div class="mp-point-name">Butterfly Garden</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">17</div>
+                            <div class="mp-point-name">Amphitheatre</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">18</div>
+                            <div class="mp-point-name">Swimming Pool</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">19</div>
+                            <div class="mp-point-name">Kids Swimming Pool</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">20</div>
+                            <div class="mp-point-name">Half Basketball Court</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">21</div>
+                            <div class="mp-point-name">Fitness Trail</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">22</div>
+                            <div class="mp-point-name">Open Gym</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">23</div>
+                            <div class="mp-point-name">Lily Pond</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="amenity-category">
-                <h3 class="category-title">Central Courtyard</h3>
-                <div class="amenity-item">
-                    <div class="amenity-number">7</div>
-                    <div class="amenity-name">Reception</div>
+            <!-- RowHomes Plan -->
+            <div id="mp-rowhomes" class="mp-plan-view">
+                <div class="mp-image-container">
+                    <img src="./images/master plan.webp" 
+                         alt="RowHomes Masterplan" 
+                         class="mp-image">
                 </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">8</div>
-                    <div class="amenity-name">Senior Park</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">9</div>
-                    <div class="amenity-name">Sand Pitz</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">10</div>
-                    <div class="amenity-name">Clubhouse</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">11</div>
-                    <div class="amenity-name">Gathering Space</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">12</div>
-                    <div class="amenity-name">Fountain Plaza</div>
+
+                <div class="mp-points-section">
+                    <div class="mp-points-grid">
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">1</div>
+                            <div class="mp-point-name">Mini Amphitheatre</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">2</div>
+                            <div class="mp-point-name">Outdoor Performance</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">3</div>
+                            <div class="mp-point-name">Open Sits Outs</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">4</div>
+                            <div class="mp-point-name">Lotus Pond</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">5</div>
+                            <div class="mp-point-name">Kids Play Area</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">6</div>
+                            <div class="mp-point-name">Cricket Pitch</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">7</div>
+                            <div class="mp-point-name">Reception</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">8</div>
+                            <div class="mp-point-name">Senior Park</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">9</div>
+                            <div class="mp-point-name">Sand Pitz</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">10</div>
+                            <div class="mp-point-name">Clubhouse</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">11</div>
+                            <div class="mp-point-name">Gathering Space</div>
+                        </div>
+
+                        <div class="mp-point-item">
+                            <div class="mp-point-number">12</div>
+                            <div class="mp-point-name">Fountain Plaza</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="amenity-category">
-                <h3 class="category-title">Forest Walk</h3>
-                <div class="amenity-item">
-                    <div class="amenity-number">13</div>
-                    <div class="amenity-name">Heb Garden</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">15</div>
-                    <div class="amenity-name">Waterbody</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">17</div>
-                    <div class="amenity-name">Amphitheatre</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">19</div>
-                    <div class="amenity-name">Kids Swimming Pool</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">21</div>
-                    <div class="amenity-name">Fitness Trail</div>
-                </div>
-                <div class="amenity-item">
-                    <div class="amenity-number">23</div>
-                    <div class="amenity-name">Lily Pond</div>
-                </div>
-            </div>
-
         </div>
     </div>
-    <!-- Modal 1 - Add this NEW code -->
-    <div id="modal1" class="modal">
-        <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <div class="modal-content">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                alt="Site Layout Plan" class="modal-image">
-            <h2 class="modal-title">Site Layout Plan</h2>
-        </div>
-    </div>
-
-    <!-- Modal 2 - Add this NEW code -->
-    <div id="modal2" class="modal">
-        <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <div class="modal-content">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Landscape Master Plan" class="modal-image">
-            <h2 class="modal-title">Landscape Master Plan</h2>
-        </div>
-    </div>
+    
 
 
 
@@ -374,8 +464,8 @@
         <h1 class="main-title">FLOOR PLANS</h1>
 
         <div class="facing-buttons">
-            <button class="facing-btn active" data-facing="north">VILLAMENTS</button>
             <button class="facing-btn" data-facing="east">VILLAS</button>
+            <button class="facing-btn active" data-facing="north">ROWHOMES</button>
         </div>
 
         <div class="floor-plan-slider-container">
@@ -549,11 +639,11 @@
 
   <div class="booking-container" id="booking">
     <div class="booking-header-section">
-      <div class="booking-property-toggle">
-        <button class="booking-toggle-btn active" onclick="showProperty(event, 'villaments')">Villaments</button>
-        <button class="booking-toggle-btn" onclick="showProperty(event, 'villas')">Villas</button>
-      </div>
       <h1 class="booking-main-title">Schedule a Visit</h1>
+      <div class="booking-property-toggle">
+          <button class="booking-toggle-btn" onclick="showProperty(event, 'villas')">Villas</button>
+        <button class="booking-toggle-btn active" onclick="showProperty(event, 'villaments')">Rowhomes </button>
+      </div>
     </div>
 
     <!-- Villaments Section -->
@@ -563,7 +653,7 @@
           <iframe 
           style="height: 100%;"
             class="booking-map-container"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8413168347757!2d77.6413!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0x f4778e7f0b0b2b1a!2sBengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.8216920381174!2d77.7494998!3d13.110479699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae05ce2feb0815%3A0xf045d44c3ec5d4c8!2zVHJpZmVjdGEgVmVyZGUgRW4gUmVzcGxhbmRvciAtIFRoaXJ1bWVuYWhhbGxpIOCypOCyv-CysOCzgeCyruCzh-CyqOCyueCys-CzjeCys-Cyvw!5e0!3m2!1sen!2sin!4v1759149186779!5m2!1sen!2sin"
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
@@ -612,7 +702,7 @@
                 </select>
               </div>
             </div>
-            <button type="submit" class="booking-submit-btn">Book Villaments Visit</button>
+            <button type="submit" class="booking-submit-btn">Book Rowhomes  Visit</button>
           </form>
         </div>
       </div>
@@ -625,7 +715,7 @@
           <iframe 
           style="height: 100%;"
             class="booking-map-container"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6541234567890!2d77.5945!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1583c9b44e6d%3A0x f4778e7f0b0b2b1a!2sWhitefield%2C+Bengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v0987654321"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.8216920381174!2d77.7494998!3d13.110479699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae05ce2feb0815%3A0xf045d44c3ec5d4c8!2zVHJpZmVjdGEgVmVyZGUgRW4gUmVzcGxhbmRvciAtIFRoaXJ1bWVuYWhhbGxpIOCypOCyv-CysOCzgeCyruCzh-CyqOCyueCys-CzjeCys-Cyvw!5e0!3m2!1sen!2sin!4v1759149186779!5m2!1sen!2sin"
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
@@ -702,7 +792,7 @@
       <!-- Logo -->
       <div class="footer-logo">
         <!-- <p style="letter-spacing:3px; font-weight:500;">Trifecta</p> -->
-        <h2>Trifecta</h2>
+        <h2><img src="./icons/Trifecta-1080x1080-RGB-Logo-Transparency.png" class="logo" alt=""></h2>
         <div class="social-links">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -714,7 +804,7 @@
       <!-- Contact -->
       <div class="footer-col">
         <h3>Sales & Marketing</h3>
-        <p>+(91) 808 800 4411</p>
+        <p>+(91) 80502 86677</p>
         <p>Others: +(91) 895 105 2233</p>
         <p>Enquiry: <a href="mailto:enquiry@trifectaprojects.com">enquiry@trifectaprojects.com</a></p>
         <p>Email: <a href="mailto:enquiry@info@trifectaprojects.com">info@trifectaprojects.com</a></p>
@@ -735,6 +825,7 @@
       Copyright 2025 - Project by TRIFECTA
     </div>
 </footer>
+
 
     <script src="./script.js"></script>
 </body>
