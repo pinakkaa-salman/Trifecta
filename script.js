@@ -279,37 +279,24 @@ window.addEventListener("load", () => {
 });
 
 // master plan script
+function mpShowPlan(planType) {
+            // Update button states
+            const buttons = document.querySelectorAll('.mp-toggle-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('mp-active');
+            });
+            event.target.classList.add('mp-active');
 
-// master plan script
+            // Hide all plans
+            const plans = document.querySelectorAll('.mp-plan-view');
+            plans.forEach(plan => {
+                plan.classList.remove('mp-active');
+            });
 
-function openModal(modalId) {
-  document.getElementById(modalId).style.display = "block";
-  document.body.style.overflow = "hidden";
-}
+            // Show selected plan
+            document.getElementById(`mp-${planType}`).classList.add('mp-active');
+        }
 
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = "none";
-  document.body.style.overflow = "auto";
-}
-
-// Close modal when clicking outside the image - USE ADDEVENTLISTENER
-window.addEventListener("click", function (event) {
-  if (event.target.classList.contains("modal")) {
-    event.target.style.display = "none";
-    document.body.style.overflow = "auto";
-  }
-});
-
-// Close modal with escape key
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    const modals = document.querySelectorAll(".modal");
-    modals.forEach((modal) => {
-      modal.style.display = "none";
-    });
-    document.body.style.overflow = "auto";
-  }
-});
 
 // Floor plan data
 const floorPlansData = {
@@ -318,36 +305,36 @@ const floorPlansData = {
       [
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-17.webp",
           title: "North Facing - 3200 SQFT",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-18.webp",
           title: "North Facing - 3200 SQFT",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-19.webp",
           title: "North Facing - 3200 SQFT",
         },
       ],
       [
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-20.webp",
           title: "North Facing - 3700 SQFT",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-21.webp",
           title: "North Facing - 3700 SQFT",
         },
-        {
-          image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
-          title: "North Facing - 3700 SQFT",
-        },
+        // {
+        //   image:
+        //     "./images/plan-17.webp",
+        //   title: "North Facing - 3700 SQFT",
+        // },
       ],
     ],
     tableData: [
@@ -370,36 +357,36 @@ const floorPlansData = {
       [
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-22.webp",
           title: "East Facing - 3200 SQFT",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-23.webp",
           title: "East Facing - 3200 SQFT",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-24.webp",
           title: "East Facing - 3200 SQFT",
         },
       ],
       [
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-25.webp",
           title: "East Facing - 3700 SQFT",
         },
         {
           image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
+            "./images/plan-26.webp",
           title: "East Facing - 3700 SQFT",
         },
-        {
-          image:
-            "https://images.unsplash.com/photo-1721244654210-a505a99661e9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvb3IlMjBwbGFuc3xlbnwwfHwwfHx8MA%3D%3D",
-          title: "East Facing - 3700 SQFT",
-        },
+        // {
+        //   image:
+        //     "./images/plan-17.webp",
+        //   title: "East Facing - 3700 SQFT",
+        // },
       ],
     ],
     tableData: [
@@ -587,90 +574,90 @@ const galleryInteriorData = {
   north: [
     {
       image:
-        "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
+        "./images/gallery-04.webp",
       title: "Living Room",
       description:
         "Spacious and modern living area with natural lighting and contemporary furnishing.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1723110994499-df46435aa4b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+        "./images/gallery-05.webp",
       title: "Dining Room",
       description:
         "Elegant dining space perfect for family gatherings and entertaining guests.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
+        "./images/gallery-06.webp",
       title: "Master Bedroom",
       description:
         "Luxurious master suite with panoramic views and premium finishes.",
     },
     {
       image:
-        "https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
+        "./images/gallery-07.webp",
       title: "Modern Kitchen",
       description:
         "State-of-the-art kitchen with high-end appliances and sleek design.",
     },
-    {
-      image:
-        "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmVhbGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D",
-      title: "Study Room",
-      description:
-        "Quiet and inspiring workspace with built-in storage and natural light.",
-    },
-    {
-      image:
-        "https://plus.unsplash.com/premium_photo-1680382578857-c331ead9ed51?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-      title: "Bathroom",
-      description:
-        "Spa-like bathroom with premium fixtures and modern amenities.",
-    },
+    // {
+    //   image:
+    //     "./images/gallery-04.webp",
+    //   title: "Study Room",
+    //   description:
+    //     "Quiet and inspiring workspace with built-in storage and natural light.",
+    // },
+    // {
+    //   image:
+    //     "./images/gallery-04.webp",
+    //   title: "Bathroom",
+    //   description:
+    //     "Spa-like bathroom with premium fixtures and modern amenities.",
+    // },
   ],
   east: [
     {
       image:
-        "https://images.unsplash.com/photo-1600992045264-136a22de917e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+        "./images/gallery-08.webp",
       title: "Grand Living Area",
       description:
         "Expansive living space with floor-to-ceiling windows and premium materials.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1601760561441-16420502c7e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+        "./images/gallery-09.webp",
       title: "Gourmet Kitchen",
       description:
         "Professional-grade kitchen with island seating and top-tier appliances.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+        "./images/gallery-07.webp",
       title: "Luxury Bedroom",
       description:
         "Serene bedroom retreat with walk-in closet and private balcony access.",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1599809275695-5e96ca83bc43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
+        "./images/gallery-10.webp",
       title: "Entertainment Lounge",
       description:
         "Stylish entertainment area perfect for relaxation and social gatherings.",
     },
-    {
-      image:
-        "https://images.unsplash.com/photo-1647579350413-a6ada4e480ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-      title: "Home Office",
-      description:
-        "Professional workspace with panoramic city views and modern technology.",
-    },
-    {
-      image:
-        "https://plus.unsplash.com/premium_photo-1661876449499-26de7959878f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHJlYWxlc3RhdGV8ZW58MHx8MHx8fDA%3D",
-      title: "Master Bath",
-      description:
-        "Resort-style bathroom with soaking tub and rain shower experience.",
-    },
+    // {
+    //   image:
+    //     "./images/gallery-04.webp",
+    //   title: "Home Office",
+    //   description:
+    //     "Professional workspace with panoramic city views and modern technology.",
+    // },
+    // {
+    //   image:
+    //     "./images/gallery-04.webp",
+    //   title: "Master Bath",
+    //   description:
+    //     "Resort-style bathroom with soaking tub and rain shower experience.",
+    // },
   ],
 };
 
@@ -964,14 +951,14 @@ const propData = {
     description:
       "Step into a world where luxury embraces nature. With spacious layouts, elegant finishes, and serene surroundings, every home is a private sanctuary designed for those who seek sophistication and tranquility in equal measure. ",
     features: [
-      { label: "SPANNING", icon: "⚠️", value: "2.5 Acres" },
-      { label: "ADORNING", icon: "🌟", value: "100+ TREES" },
-      { label: "CENTRAL COURTYARD", icon: "✉️", value: "50,000 SqFt" },
-      { label: "SECURED", icon: "🏆", value: "GATED COMMUNITY" },
+      { label: "SPANNING", icon: "./icons/plot.svg", value: "2.5 Acres" },
+      { label: "ADORNING", icon: "./icons/nature.svg", value: "100+ TREES" },
+      { label: "CENTRAL COURTYARD", icon: "./icons/maximize.svg", value: "50,000 SqFt" },
+      { label: "SECURED", icon: "./icons/gate.svg", value: "GATED COMMUNITY" },
     ],
     details: {
       top: [
-        { category: "EXCLUSIVE", icon: "", title: "49 Villaments" },
+        { category: "EXCLUSIVE", icon: "", title: "49 Rowhomes " },
         { category: "4 BHK", icon: "", title: "Triplex" },
         { category: "BUILTUP", icon: "", title: "3030 Sqft Onwards" },
         { category: "TERRACE GARDEN", icon: "", title: "300 SQ. FT" },
@@ -990,10 +977,10 @@ const propData = {
     description:
       "Experience the perfect harmony of luxury, elegance, and nature. Nestled in Budigere, Whitefield, these 4 BHK villas redefine upscale living with spacious layouts, modern aesthetics, lush gardens, and serene outdoor spaces — a private sanctuary for a truly elevated lifestyle.",
     features: [
-      { label: "SPANNING", icon: "🏠", value: "5.5 Acres" },
-      { label: "Adorning", icon: "🌳", value: "100+ TREES" },
-      { label: "Central Courtyard", icon: "🏊", value: "50,000 SqFt" },
-      { label: "Secured", icon: "👑", value: "GATED COMMUNITY" },
+      { label: "SPANNING", icon: "./icons/plot.svg", value: "5.5 Acres" },
+      { label: "Adorning", icon: "./icons/nature.svg", value: "100+ TREES" },
+      { label: "Central Courtyard", icon: "./icons/maximize.svg", value: "50,000 SqFt" },
+      { label: "Secured", icon: "./icons/gate.svg", value: "GATED COMMUNITY" },
     ],
     details: {
       top: [
@@ -1079,7 +1066,7 @@ function propRenderContent() {
                         (feature) => `
                         <div class="prop-feature">
                             <div class="prop-feature-label">${feature.label}</div>
-                            <div class="prop-feature-icon">${feature.icon}</div>
+                            <img src='${feature.icon}' class="prop-feature-icon special-icons"></img>
                             <div class="prop-feature-value">${feature.value}</div>
                         </div>
                     `
