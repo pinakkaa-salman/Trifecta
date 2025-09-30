@@ -276,11 +276,12 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 4rem;
 }
 
 .slide1-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./images/Website Villa Offer Creative desktop.jpg");
+    url("./images/Website\ Villa\ Offer\ Creative\ 628.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2529,3 +2530,4 @@ footer {
   height: 50px;
   width: 50px;
 }
+
