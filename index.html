@@ -13,16 +13,18 @@
 </head>
 <body>
     <nav class="navbar" id="navbar">
-        <div class="logo">
+        <div class="logo-wrapper">
             <img src="./icons/Trifecta-1080x1080-RGB-Logo-Transparency.png" alt="" class="logo">
+            <img src="./images/TVER 1080 RGB Logo - Transparency.png" alt="" class="logo-long">
         </div>
         
         <div class="menu" id="menu">
             <a href="#overview">Overview</a>
-            <a href="#galleryInteriorShowcase">Gallery</a>
+            <a href="#configuration">Configuration</a>
             <a href="#masterplan">Master Plan</a>
-            <a href="#locationadvantages">Location Advantage</a>
-            <a href="#booking">Contact Us</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#galleryInteriorShowcase">Gallery</a>
+            <a href="#locationadvantages">Connectivity</a>
             <a href="#booking" class="btn">SCHEDULE A VISIT</a>
         </div>
 
@@ -32,8 +34,11 @@
             <span></span>
         </div>
     </nav>
-    <div class="slider-container">
-        <!-- Slide 1 -->
+
+    <div class="slider-container-main"></div>
+
+    <!-- <div class="slider-container">
+
         <div class="slide active" data-slide="1">
             <div class="slide-background slide1-bg"></div>
             <div class="slide-content">
@@ -53,9 +58,6 @@
                             <div class="badge">
                                 <span>Only <strong>49</strong> Units Available</span>
                             </div>
-                            <!-- <div class="badge">
-                                <span>Ready by Q4 2025</span>
-                            </div> -->
                         </div>
                     </div>
                     <div class="form-container">
@@ -103,7 +105,7 @@
             </div>
         </div>
 
-        <!-- Slide 2 -->
+
         <div class="slide" data-slide="2">
             <div class="slide-background slide2-bg"></div>
             <div class="slide-content">
@@ -123,9 +125,6 @@
                             <div class="badge">
                                 <span>Only <strong>50</strong> Units Available</span>
                             </div>
-                            <!-- <div class="badge">
-                                <span>Ready by Q2 2026</span>
-                            </div> -->
                         </div>
                     </div>
                     <div class="form-container">
@@ -173,7 +172,6 @@
             </div>
         </div>
 
-        <!-- Navigation Arrows -->
         <button class="nav-arrow nav-arrow-left" id="prevSlide">
             <i class="fas fa-chevron-left"></i>
         </button>
@@ -181,11 +179,34 @@
             <i class="fas fa-chevron-right"></i>
         </button>
 
-        <!-- Slide Indicators -->
         <div class="slide-indicators">
             <span class="indicator active" data-slide="1"></span>
             <span class="indicator" data-slide="2"></span>
         </div>
+    </div> -->
+
+    <div id="overview" class="overiew-section">
+        <div class="hero-content">
+                        <!-- <div class="overiew-title">The Address of Good Living</div> -->
+                        <div class="discover-badge">
+                             <span>The Address of Good Living</span>
+                        </div>
+                        <h1 class="hero-title">Luxury Triplex Villas &amp; Row Homes on Budigere Road, Whitefield Spacious Homes in a 50+ Acre Community – 786 Units &amp; 400+ Families</h1>
+                        <p class="hero-subtitle">Villa Prices from ₹2.82 Cr | Row Homes from ₹2.20 Cr**</p>
+                        <div class="hero-buttons">
+                            <a href="#booking" class="btn btn-primary">SCHEDULE A VISIT</a>
+                            <a href="#" class="btn btn-secondary" onclick="openBrochurePopup(); return false;">GET BROCHURE & FLOOR PLANS INSTANTLY</a>
+                        </div>
+                        <div class="property-badges">
+                            <div class="badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>RERA Approved</span>
+                            </div>
+                            <div class="badge">
+                                <span>Only <strong>49</strong> Units Available</span>
+                            </div>
+                        </div>
+                    </div>
     </div>
 
     <section class="prop-main-section">
@@ -207,46 +228,18 @@
             </div>
         </div>
     </section>
-    
- <div class="gallery-interior-showcase" id="galleryInteriorShowcase">
-        <div class="gallery-showcase-header">
-            <h1 class="gallery-showcase-title">GALLERY</h1>
-            <div class="gallery-face-toggle">
-                <button class="gallery-face-btn" data-gallery-face="east">VILLAS</button>
-                <button class="gallery-face-btn gallery-active" data-gallery-face="north">ROWHOMES</button>
-            </div>
-        </div>
 
-        <div class="gallery-carousel-container">
-            <button class="gallery-carousel-nav gallery-prev" onclick="galleryPreviousSlide()">❮</button>
-            <button class="gallery-carousel-nav gallery-next" onclick="galleryNextSlide()">❯</button>
-
-            <div class="gallery-carousel-track" id="galleryCarouselTrack">
-                <!-- Slides will be populated by JavaScript -->
-            </div>
-
-            <div class="gallery-progress-bar" id="galleryProgressBar"></div>
-        </div>
-
-        <div class="gallery-carousel-pagination" id="galleryCarouselPagination">
-            <!-- Pagination dots will be populated by JavaScript -->
-        </div>
-    </div>
-    
-
-
-
-    <div class="mp-container">
+    <div id="masterplan" class="mp-container">
         <div class="mp-header">
             <h1 class="mp-title">Masterplan</h1>
-            <div class="mp-toggle-buttons">
+            <!-- <div class="mp-toggle-buttons">
                 <button class="mp-toggle-btn mp-active" onclick="mpShowPlan('villas')">
                     Villas
                 </button>
                 <button class="mp-toggle-btn" onclick="mpShowPlan('rowhomes')">
                     RowHomes
                 </button>
-            </div>
+            </div> -->
         </div>
 
         <div class="mp-content">
@@ -258,7 +251,7 @@
                          class="mp-image">
                 </div>
 
-                <div class="mp-points-section">
+                <!-- <div class="mp-points-section">
                     <div class="mp-points-grid">
                         <div class="mp-point-item">
                             <div class="mp-point-number">1</div>
@@ -375,7 +368,7 @@
                             <div class="mp-point-name">Lily Pond</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- RowHomes Plan -->
@@ -452,11 +445,8 @@
             </div>
         </div>
     </div>
-    
 
-
-
-     <div class="floor-plans-container">
+    <div class="floor-plans-container">
         <div class="discover-badge">
             <span>Discover plans</span>
         </div>
@@ -488,390 +478,898 @@
             <div class="pricing-table">
                 <div class="table-header">
                     <div>Type</div>
-                    <div>SBA</div>
+                    <div>Area ( Sq.ft)</div>
                     <div>Price</div>
-                    <div>Availability</div>
+                    <!-- <div>Availability</div> -->
                 </div>
                 <div id="tableContent">
                     <!-- Table rows will be populated by JavaScript -->
                 </div>
             </div>
 
-            <a href="#" class="get-pricing-btn" onclick="openBrochurePopup(); return false;" style="text-decoration: none;">GET DETAILED PRICING</a>
+            <a href="#" class="get-pricing-btn" onclick="openBrochurePopup(); return false;" style="text-decoration: none;">Download Cost sheet</a>
         </div>
     </div>
 
+    <div id="amenities" class="amenities-section">
+        <div class="amenities-header">
+            <h1 class="amenities-title">AMENITIES</h1>
+            <p class="amenities-subtitle">The Symposium<br>100+ Lifestyle Amenities with 27 parks</p>
+            
+            <div class="phase-buttons">
+                <button class="phase-btn active" onclick="showPhase(1)">Amenities Phase 1</button>
+                <button class="phase-btn" onclick="showPhase(2)">Amenities Phase 2</button>
+                <button class="phase-btn" onclick="showPhase(3)">Amenities Phase 3</button>
+            </div>
+        </div>
 
+        <!-- Phase 1 Content -->
+        <div id="phase1" class="phase-content active">
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎭</text>
+                    </svg>
+                    <div class="amenity-name">Amphitheatre</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🍖</text>
+                    </svg>
+                    <div class="amenity-name">Barbecue Counter</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏀</text>
+                    </svg>
+                    <div class="amenity-name">Basketball Court</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎪</text>
+                    </svg>
+                    <div class="amenity-name">Children's Play Area</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🧗</text>
+                    </svg>
+                    <div class="amenity-name">Climbing Wall</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏏</text>
+                    </svg>
+                    <div class="amenity-name">Cricket Pitch</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">👴</text>
+                    </svg>
+                    <div class="amenity-name">Elder's Zone</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌸</text>
+                    </svg>
+                    <div class="amenity-name">Floral Garden</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🍎</text>
+                    </svg>
+                    <div class="amenity-name">Fruit Orchard</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">♟️</text>
+                    </svg>
+                    <div class="amenity-name">Giant Chess</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🥬</text>
+                    </svg>
+                    <div class="amenity-name">Kitchen Garden</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🧘</text>
+                    </svg>
+                    <div class="amenity-name">Meditation Pavilion</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌿</text>
+                    </svg>
+                    <div class="amenity-name">Multipurpose Lawn</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🐕</text>
+                    </svg>
+                    <div class="amenity-name">Pet Park with Pet Equipment</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏖️</text>
+                    </svg>
+                    <div class="amenity-name">Sandpit Tot-Lot</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎾</text>
+                    </svg>
+                    <div class="amenity-name">Tennis Court</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏐</text>
+                    </svg>
+                    <div class="amenity-name">Volleyball Court</div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Phase 2 Content -->
+        <div id="phase2" class="phase-content">
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌳</text>
+                    </svg>
+                    <div class="amenity-name">Dense Tree Belt</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">💐</text>
+                    </svg>
+                    <div class="amenity-name">Floral Garden</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎠</text>
+                    </svg>
+                    <div class="amenity-name">Kids' Play Area</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌾</text>
+                    </svg>
+                    <div class="amenity-name">Multi-Purpose Lawn</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">☕</text>
+                    </svg>
+                    <div class="amenity-name">Outdoor Café</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">⛰️</text>
+                    </svg>
+                    <div class="amenity-name">Sandpit with Climbing Wall</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">⛸️</text>
+                    </svg>
+                    <div class="amenity-name">Skating Rink</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎬</text>
+                    </svg>
+                    <div class="amenity-name">Stage with Feature Wall</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏊</text>
+                    </svg>
+                    <div class="amenity-name">Swimming Pool</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌲</text>
+                    </svg>
+                    <div class="amenity-name">Swing Park under the Tree Court</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎡</text>
+                    </svg>
+                    <div class="amenity-name">Tot-Lot on EPDM</div>
+                </div>
+            </div>
+        </div>
 
+       <!-- Phase 3 Content -->
+        <div id="phase3" class="phase-content">
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🪑</text>
+                    </svg>
+                    <div class="amenity-name">Accent Tree Seating Court</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎯</text>
+                    </svg>
+                    <div class="amenity-name">Activity Walls</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🥊</text>
+                    </svg>
+                    <div class="amenity-name">Boxing Bag Stands</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🕸️</text>
+                    </svg>
+                    <div class="amenity-name">Climbing Nets & Rings</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">⭕</text>
+                    </svg>
+                    <div class="amenity-name">Concrete Dome Seaters</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🚇</text>
+                    </svg>
+                    <div class="amenity-name">Concrete / Lawn Berm Tunnel</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">👥</text>
+                    </svg>
+                    <div class="amenity-name">Congregation Lawn</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🚴</text>
+                    </svg>
+                    <div class="amenity-name">Cycling Area</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🧱</text>
+                    </svg>
+                    <div class="amenity-name">Exercise Walls</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">💪</text>
+                    </svg>
+                    <div class="amenity-name">Fitness Equipment Area for Adults</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌀</text>
+                    </svg>
+                    <div class="amenity-name">Floor Maze & Maze Walls</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">⛲</text>
+                    </svg>
+                    <div class="amenity-name">Focal Water Feature</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🖼️</text>
+                    </svg>
+                    <div class="amenity-name">Frame / Punctured Walls</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">📐</text>
+                    </svg>
+                    <div class="amenity-name">Grid Garden</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎡</text>
+                    </svg>
+                    <div class="amenity-name">Hamster Wheels</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌉</text>
+                    </svg>
+                    <div class="amenity-name">Hanging Net Bridge with Access by Slide</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎢</text>
+                    </svg>
+                    <div class="amenity-name">Integrated Play Area</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🪜</text>
+                    </svg>
+                    <div class="amenity-name">Ladder Rungs</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🧮</text>
+                    </svg>
+                    <div class="amenity-name">Memory Abacus with Thematic Elements</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏀</text>
+                    </svg>
+                    <div class="amenity-name">Multi-Hoop Basketball</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎪</text>
+                    </svg>
+                    <div class="amenity-name">Open-Air Theatre with Chalk Wall</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🪢</text>
+                    </svg>
+                    <div class="amenity-name">Pull-Up Jute Ropes</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🪨</text>
+                    </svg>
+                    <div class="amenity-name">Rockery Garden</div>
+                </div>
+                <div class="amenity-item">
+                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
+                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏖️</text>
+                    </svg>
+                    <div class="amenity-name">Sandpit</div>
+                </div>
+            </div>
+        </div>
 
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <h1 class="title">The Club Verdant</h1>
+            <p class="subtitle">50,000 Sq.ft Multistory Clubhouse. One of the largest in the neighborhood.</p>
+            
+            <h2 class="amenities-title">Clubhouse Amenities</h2>
+            
+            <div class="marquee-container">
+                <div class="marquee">
+                    <div class="amenity-item">
+                        <i class="fas fa-table-tennis-paddle-ball"></i>
+                        <span>Three Indoor Badminton Courts</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-baseball"></i>
+                        <span>Squash Court</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Indoor Swimming Pool (Temperature Controlled)</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Gymnasium</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-glass-cheers"></i>
+                        <span>2 Banquet Halls</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-users"></i>
+                        <span>Conference Hall</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-spa"></i>
+                        <span>Yoga and Meditation Room</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-book"></i>
+                        <span>Library</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-couch"></i>
+                        <span>Outdoor Lounge</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-building"></i>
+                        <span>Roof Deck</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-chess"></i>
+                        <span>Indoor Games Room</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-coffee"></i>
+                        <span>Cafeteria</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-bed"></i>
+                        <span>Luxury Room</span>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="amenity-item">
+                        <i class="fas fa-table-tennis-paddle-ball"></i>
+                        <span>Three Indoor Badminton Courts</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-baseball"></i>
+                        <span>Squash Court</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Indoor Swimming Pool (Temperature Controlled)</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Gymnasium</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-glass-cheers"></i>
+                        <span>2 Banquet Halls</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-users"></i>
+                        <span>Conference Hall</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-spa"></i>
+                        <span>Yoga and Meditation Room</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-book"></i>
+                        <span>Library</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-couch"></i>
+                        <span>Outdoor Lounge</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-building"></i>
+                        <span>Roof Deck</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-chess"></i>
+                        <span>Indoor Games Room</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-coffee"></i>
+                        <span>Cafeteria</span>
+                    </div>
+                    <div class="amenity-item">
+                        <i class="fas fa-bed"></i>
+                        <span>Luxury Room</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="image-placeholder">
+                <div>
+                    <img src="./Clubhouse Images/IMG-20231006-WA0149.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="gallery-interior-showcase" id="galleryInteriorShowcase">
+            <div class="gallery-showcase-header">
+                <h1 class="gallery-showcase-title">GALLERY</h1>
+                <div class="gallery-face-toggle">
+                    <button class="gallery-face-btn" data-gallery-face="east">VILLAS</button>
+                    <button class="gallery-face-btn gallery-active" data-gallery-face="north">ROWHOMES</button>
+                    <button class="gallery-face-btn" data-gallery-face="clubhouse">CLUBHOUSE</button>
+                </div>
+            </div>
+
+            <div class="gallery-carousel-container">
+                <button class="gallery-carousel-nav gallery-prev" onclick="galleryPreviousSlide()">❮</button>
+                <button class="gallery-carousel-nav gallery-next" onclick="galleryNextSlide()">❯</button>
+
+                <div class="gallery-carousel-track" id="galleryCarouselTrack">
+                    <!-- Slides will be populated by JavaScript -->
+                </div>
+
+                <div class="gallery-progress-bar" id="galleryProgressBar"></div>
+            </div>
+
+            <div class="gallery-carousel-pagination" id="galleryCarouselPagination">
+                <!-- Pagination dots will be populated by JavaScript -->
+            </div>
+    </div>
 
     <section class="la-location-advantages" id="locationadvantages">
-    <h2 class="la-section-title">Location Advantages</h2>
-    
-    <div class="la-content-wrapper">
-      <!-- Map Section -->
-      <div class="la-map-container">
-        <!-- <img src="https://images.unsplash.com/photo-1568137223448-0708e0e4779c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fGxvY2F0aW9uJTIwbWFwfGVufDB8fDB8fHww" alt="map" class="la-map-image"> -->
+        <h2 class="la-section-title">CONNECTIVITY</h2>
         
-      </div>
-
-      <!-- Amenities Section -->
-      <div class="la-amenities-container">
-        <!-- Example Section -->
-        <div class="la-amenity-section">
-          <div class="la-amenity-header la-active" onclick="laToggleSection(this)">
-            <span class="la-amenity-title">Groceries & Supermarkets</span>
-            <span class="la-dropdown-icon la-rotated">▼</span>
-          </div>
-          <div class="la-amenity-content la-active">
-            <div class="la-amenity-list">
-              <div class="la-amenity-item">Grand Plus Hypermart</div>
-              <div class="la-amenity-item">Farmers Market</div>
-              <div class="la-amenity-item">MK Retail</div>
-              <div class="la-amenity-item">Gopalan Mall</div>
-              <div class="la-amenity-item">Big Bazaar</div>
-            </div>
-          </div>
+        <div class="la-content-wrapper">
+        <!-- Map Section -->
+        <div class="la-map-container">
+            <!-- <img src="https://images.unsplash.com/photo-1568137223448-0708e0e4779c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTZ8fGxvY2F0aW9uJTIwbWFwfGVufDB8fDB8fHww" alt="map" class="la-map-image"> -->
+            
         </div>
 
-        <!-- Hospitals Section -->
-        <div class="la-amenity-section">
-          <div class="la-amenity-header" onclick="laToggleSection(this)">
-            <span class="la-amenity-title">Hospitals</span>
-            <span class="la-dropdown-icon">▼</span>
-          </div>
-          <div class="la-amenity-content">
-            <div class="la-amenity-list">
-              <div class="la-amenity-item">Sathya-Sai Hospital</div>
-              <div class="la-amenity-item">Narayana Multispecialty Hospital</div>
-              <div class="la-amenity-item">Vydehi Institute of Medical Sciences</div>
-              <div class="la-amenity-item">Columbia Asia</div>
-              <div class="la-amenity-item">Manipal Hospital</div>
-              <div class="la-amenity-item">East Point Hospital</div>
-              <div class="la-amenity-item">KR Puram Hospital</div>
+        <!-- Amenities Section -->
+        <div class="la-amenities-container">
+            <!-- Example Section -->
+            <div class="la-amenity-section">
+            <div class="la-amenity-header la-active" onclick="laToggleSection(this)">
+                <span class="la-amenity-title">Schools</span>
+                <span class="la-dropdown-icon la-rotated">▼</span>
             </div>
-          </div>
-        </div>
+            <div class="la-amenity-content la-active">
+                <div class="la-amenity-list">
+                <div class="la-amenity-item">National Centre for Excellence School</div>
+                <div class="la-amenity-item">Chris Canadian global School</div>
+                <div class="la-amenity-item">Narayana E-Techno School</div>
+                <div class="la-amenity-item">New Baldwin international Residential School</div>
+                <div class="la-amenity-item">Sriram Global School</div>
+                <div class="la-amenity-item">National Public School</div>
+                <div class="la-amenity-item">VIBGYOR High school</div>
+                </div>
+            </div>
+            </div>
 
-         <!-- Malls Section -->
-                <div class="la-amenity-section">
-                    <div class="la-amenity-header" onclick="laToggleSection(this)">
-                        <span class="la-amenity-title">Malls</span>
-                        <span class="la-dropdown-icon">▼</span>
-                    </div>
-                    <div class="la-amenity-content">
-                        <div class="la-amenity-list">
-                            <div class="la-amenity-item">Orion Uptown Mall</div>
-                            <div class="la-amenity-item">Holiday Inn</div>
-                            <div class="la-amenity-item">Forum Mall at Shantiniketan</div>
-                            <div class="la-amenity-item">Gopalan Mall</div>
-                            <div class="la-amenity-item">Phoenix Market City</div>
-                            <div class="la-amenity-item">Inorbit Mall</div>
-                            <div class="la-amenity-item">Forum Value Mall</div>
-                            <div class="la-amenity-item">VR Bengaluru Mall</div>
+            <!-- Hospitals Section -->
+            <div class="la-amenity-section">
+            <div class="la-amenity-header" onclick="laToggleSection(this)">
+                <span class="la-amenity-title">Hospitals</span>
+                <span class="la-dropdown-icon">▼</span>
+            </div>
+            <div class="la-amenity-content">
+                <div class="la-amenity-list">
+                <div class="la-amenity-item">Vydehi Clinic</div>
+                <div class="la-amenity-item">Manipal Clinic</div>
+                <div class="la-amenity-item">East Point Hospital</div>
+                <div class="la-amenity-item">Ovum Women &amp; Child Specialty Hospital</div>
+                <div class="la-amenity-item">Sathya Sai Orthopaedic &amp; Multispeciality Hospital</div>
+                <div class="la-amenity-item">Manipal Hospital</div>
+                <div class="la-amenity-item">Vydehi Hospital</div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Malls Section -->
+                    <div class="la-amenity-section">
+                        <div class="la-amenity-header" onclick="laToggleSection(this)">
+                            <span class="la-amenity-title">Work</span>
+                            <span class="la-dropdown-icon">▼</span>
+                        </div>
+                        <div class="la-amenity-content">
+                            <div class="la-amenity-list">
+                                <div class="la-amenity-item">KIADB Aeroscape SEZ</div>
+                                <div class="la-amenity-item">Bearys Global Research Triangle</div>
+                                <div class="la-amenity-item">ITPL</div>
+                                <div class="la-amenity-item">Bagmane Tech park</div>
+                                <!-- <div class="la-amenity-item">Phoenix Market City</div>
+                                <div class="la-amenity-item">Inorbit Mall</div>
+                                <div class="la-amenity-item">Forum Value Mall</div>
+                                <div class="la-amenity-item">VR Bengaluru Mall</div> -->
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Offices Section -->
-                <div class="la-amenity-section">
-                    <div class="la-amenity-header" onclick="laToggleSection(this)">
-                        <span class="la-amenity-title">Offices & Tech Parks</span>
-                        <span class="la-dropdown-icon">▼</span>
-                    </div>
-                    <div class="la-amenity-content">
-                        <div class="la-amenity-list">
-                            <div class="la-amenity-item">ITPL Campus</div>
-                            <div class="la-amenity-item">EPIP Zone</div>
-                            <div class="la-amenity-item">Bagmane Tech Park</div>
-                            <div class="la-amenity-item">Infinity</div>
-                            <div class="la-amenity-item">Manyata Tech Park</div>
-                            <div class="la-amenity-item">Bearys Global Research Triangle</div>
+                    <!-- Offices Section -->
+                    <div class="la-amenity-section">
+                        <div class="la-amenity-header" onclick="laToggleSection(this)">
+                            <span class="la-amenity-title">Shopping &amp; Leisure</span>
+                            <span class="la-dropdown-icon">▼</span>
+                        </div>
+                        <div class="la-amenity-content">
+                            <div class="la-amenity-list">
+                                <div class="la-amenity-item">Orion Uptown Mall</div>
+                                <div class="la-amenity-item">Decathlon</div>
+                                <div class="la-amenity-item">Forum Shantiniketan Mall</div>
+                                <div class="la-amenity-item">Phoenix Market City</div>
+                                <!-- <div class="la-amenity-item">Manyata Tech Park</div>
+                                <div class="la-amenity-item">Bearys Global Research Triangle</div> -->
+                            </div>
                         </div>
                     </div>
+
+                    
+
+
+            <!-- Add more sections (Malls, Offices, Schools, etc.) here like original -->
+        </div>
+        </div>
+    </section>
+
+    <div class="booking-container" id="booking">
+        <div class="booking-header-section">
+        <h1 class="booking-main-title">Schedule a Visit</h1>
+        <div class="booking-property-toggle">
+            <button class="booking-toggle-btn" onclick="showProperty(event, 'villas')">Villas</button>
+            <button class="booking-toggle-btn active" onclick="showProperty(event, 'villaments')">Rowhomes </button>
+        </div>
+        </div>
+
+        <!-- Villaments Section -->
+        <div id="villaments-section" class="booking-property-section active">
+        <div class="booking-content-wrapper">
+            <div class="booking-map-section">
+            <iframe 
+            style="height: 100%;"
+                class="booking-map-container"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.8216920381174!2d77.7494998!3d13.110479699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae05ce2feb0815%3A0xf045d44c3ec5d4c8!2zVHJpZmVjdGEgVmVyZGUgRW4gUmVzcGxhbmRvciAtIFRoaXJ1bWVuYWhhbGxpIOCypOCyv-CysOCzgeCyruCzh-CyqOCyueCys-CzjeCys-Cyvw!5e0!3m2!1sen!2sin!4v1759149186779!5m2!1sen!2sin"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+            <div class="booking-form-section">
+            <div class="booking-location-badge"></div>
+            <form id="villamentsForm" onsubmit="submitVillamentsForm(event)">
+                <div class="booking-form-group">
+                <label class="booking-form-label">Your Name</label>
+                <input type="text" id="villaments-name" class="booking-form-input" placeholder="Enter your full name" required>
                 </div>
-
-                <!-- Schools Section -->
-                <div class="la-amenity-section">
-                    <div class="la-amenity-header" onclick="laToggleSection(this)">
-                        <span class="la-amenity-title">Schools & Educational Institutions</span>
-                        <span class="la-dropdown-icon">▼</span>
-                    </div>
-                    <div class="la-amenity-content">
-                        <div class="la-amenity-list">
-                            <div class="la-amenity-item">VIBGYOR International School</div>
-                            <div class="la-amenity-item">New Baldwin</div>
-                            <div class="la-amenity-item">Delhi Public School</div>
-                            <div class="la-amenity-item">National Public School</div>
-                            <div class="la-amenity-item">Chrysalis High</div>
-                            <div class="la-amenity-item">Deens Academy</div>
-                        </div>
-                    </div>
+                <div class="booking-form-group">
+                <label class="booking-form-label">Your Email</label>
+                <input type="email" id="villaments-email" class="booking-form-input" placeholder="Enter your email address" required>
                 </div>
-
-                <!-- Major Hubs Section -->
-                <div class="la-amenity-section">
-                    <div class="la-amenity-header" onclick="laToggleSection(this)">
-                        <span class="la-amenity-title">Major Hubs Nearby</span>
-                        <span class="la-dropdown-icon">▼</span>
-                    </div>
-                    <div class="la-amenity-content">
-                        <div class="la-amenity-list">
-                            <div class="la-amenity-item">Financial District - 5 Kms</div>
-                            <div class="la-amenity-item">Aerospace SEZ - 5 Kms</div>
-                            <div class="la-amenity-item">Hardware SEZ - 5 Kms</div>
-                            <div class="la-amenity-item">Automobile Hub - 10-15 Kms</div>
-                            <div class="la-amenity-item">Manufacturing Hub - 10-15 Kms</div>
-                        </div>
-                    </div>
+                <div class="booking-form-group">
+                <label class="booking-form-label">Your Mobile</label>
+                <div class="booking-phone-group">
+                    <select id="villaments-country-code" class="booking-form-input booking-country-code">
+                    <option value="+91">(IN) +91</option>
+                    <option value="+1">(US) +1</option>
+                    <option value="+44">(UK) +44</option>
+                    <option value="+61">(AU) +61</option>
+                    </select>
+                    <input type="tel" id="villaments-phone" class="booking-form-input" placeholder="Enter your mobile number" required>
                 </div>
-
-
-        <!-- Add more sections (Malls, Offices, Schools, etc.) here like original -->
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <div class="booking-container" id="booking">
-    <div class="booking-header-section">
-      <h1 class="booking-main-title">Schedule a Visit</h1>
-      <div class="booking-property-toggle">
-          <button class="booking-toggle-btn" onclick="showProperty(event, 'villas')">Villas</button>
-        <button class="booking-toggle-btn active" onclick="showProperty(event, 'villaments')">Rowhomes </button>
-      </div>
-    </div>
-
-    <!-- Villaments Section -->
-    <div id="villaments-section" class="booking-property-section active">
-      <div class="booking-content-wrapper">
-        <div class="booking-map-section">
-          <iframe 
-          style="height: 100%;"
-            class="booking-map-container"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.8216920381174!2d77.7494998!3d13.110479699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae05ce2feb0815%3A0xf045d44c3ec5d4c8!2zVHJpZmVjdGEgVmVyZGUgRW4gUmVzcGxhbmRvciAtIFRoaXJ1bWVuYWhhbGxpIOCypOCyv-CysOCzgeCyruCzh-CyqOCyueCys-CzjeCys-Cyvw!5e0!3m2!1sen!2sin!4v1759149186779!5m2!1sen!2sin"
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+                </div>
+                <div class="booking-form-group">
+                <label class="booking-form-label">Preferred Date & Time</label>
+                <div class="booking-date-time-group">
+                    <input type="date" id="villaments-date" class="booking-form-input booking-date-input" value="2025-09-26" required>
+                    <select id="villaments-time" class="booking-form-input booking-time-input" required>
+                    <option value="">Select Time</option>
+                    <option value="08:00" style="color: black;">08:00 AM</option>
+                    <option value="09:00" style="color: black;">09:00 AM</option>
+                    <option value="10:00" style="color: black;">10:00 AM</option>
+                    <option value="11:00" style="color: black;">11:00 AM</option>
+                    <option value="12:00" style="color: black;">12:00 PM</option>
+                    <option value="13:00" style="color: black;">01:00 PM</option>
+                    <option value="14:00" style="color: black;">02:00 PM</option>
+                    <option value="15:00" style="color: black;">03:00 PM</option>
+                    <option value="16:00" style="color: black;">04:00 PM</option>
+                    <option value="17:00" style="color: black;">05:00 PM</option>
+                    <option value="18:00" style="color: black;">06:00 PM</option>
+                    </select>
+                </div>
+                </div>
+                <button type="submit" class="booking-submit-btn">Book Rowhomes  Visit</button>
+            </form>
+            </div>
         </div>
-        <div class="booking-form-section">
-          <div class="booking-location-badge"></div>
-          <form id="villamentsForm" onsubmit="submitVillamentsForm(event)">
-            <div class="booking-form-group">
-              <label class="booking-form-label">Your Name</label>
-              <input type="text" id="villaments-name" class="booking-form-input" placeholder="Enter your full name" required>
-            </div>
-            <div class="booking-form-group">
-              <label class="booking-form-label">Your Email</label>
-              <input type="email" id="villaments-email" class="booking-form-input" placeholder="Enter your email address" required>
-            </div>
-            <div class="booking-form-group">
-              <label class="booking-form-label">Your Mobile</label>
-              <div class="booking-phone-group">
-                <select id="villaments-country-code" class="booking-form-input booking-country-code">
-                  <option value="+91">(IN) +91</option>
-                  <option value="+1">(US) +1</option>
-                  <option value="+44">(UK) +44</option>
-                  <option value="+61">(AU) +61</option>
-                </select>
-                <input type="tel" id="villaments-phone" class="booking-form-input" placeholder="Enter your mobile number" required>
-              </div>
-            </div>
-            <div class="booking-form-group">
-              <label class="booking-form-label">Preferred Date & Time</label>
-              <div class="booking-date-time-group">
-                <input type="date" id="villaments-date" class="booking-form-input booking-date-input" value="2025-09-26" required>
-                <select id="villaments-time" class="booking-form-input booking-time-input" required>
-                  <option value="">Select Time</option>
-                  <option value="08:00" style="color: black;">08:00 AM</option>
-                  <option value="09:00" style="color: black;">09:00 AM</option>
-                  <option value="10:00" style="color: black;">10:00 AM</option>
-                  <option value="11:00" style="color: black;">11:00 AM</option>
-                  <option value="12:00" style="color: black;">12:00 PM</option>
-                  <option value="13:00" style="color: black;">01:00 PM</option>
-                  <option value="14:00" style="color: black;">02:00 PM</option>
-                  <option value="15:00" style="color: black;">03:00 PM</option>
-                  <option value="16:00" style="color: black;">04:00 PM</option>
-                  <option value="17:00" style="color: black;">05:00 PM</option>
-                  <option value="18:00" style="color: black;">06:00 PM</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="booking-submit-btn">Book Rowhomes  Visit</button>
-          </form>
         </div>
-      </div>
+
+        <!-- Villas Section -->
+        <div id="villas-section" class="booking-property-section">
+        <div class="booking-content-wrapper">
+            <div class="booking-map-section">
+            <iframe 
+            style="height: 100%;"
+                class="booking-map-container"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.8216920381174!2d77.7494998!3d13.110479699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae05ce2feb0815%3A0xf045d44c3ec5d4c8!2zVHJpZmVjdGEgVmVyZGUgRW4gUmVzcGxhbmRvciAtIFRoaXJ1bWVuYWhhbGxpIOCypOCyv-CysOCzgeCyruCzh-CyqOCyueCys-CzjeCys-Cyvw!5e0!3m2!1sen!2sin!4v1759149186779!5m2!1sen!2sin"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            </div>
+            <div class="booking-form-section">
+            <div class="booking-location-badge"></div>
+            <form id="villasForm" onsubmit="submitVillasForm(event)">
+                <div class="booking-form-group">
+                <label class="booking-form-label">Your Name</label>
+                <input type="text" id="villas-name" class="booking-form-input" placeholder="Enter your full name" required>
+                </div>
+                <div class="booking-form-group">
+                <label class="booking-form-label">Your Email</label>
+                <input type="email" id="villas-email" class="booking-form-input" placeholder="Enter your email address" required>
+                </div>
+                <div class="booking-form-group">
+                <label class="booking-form-label">Your Mobile</label>
+                <div class="booking-phone-group">
+                    <select id="villas-country-code" class="booking-form-input booking-country-code">
+                    <option value="+91">(IN) +91</option>
+                    <option value="+1">(US) +1</option>
+                    <option value="+44">(UK) +44</option>
+                    <option value="+61">(AU) +61</option>
+                    </select>
+                    <input type="tel" id="villas-phone" class="booking-form-input" placeholder="Enter your mobile number" required>
+                </div>
+                </div>
+                <div class="booking-form-group">
+                <label class="booking-form-label">Preferred Date & Time</label>
+                <div class="booking-date-time-group">
+                    <input type="date" id="villas-date" class="booking-form-input booking-date-input" value="2025-09-26" required>
+                    <select id="villas-time" class="booking-form-input booking-time-input" required>
+                    <option value="">Select Time</option>
+                    <option value="08:00" style="color: black;">08:00 AM</option>
+                    <option value="09:00" style="color: black;">09:00 AM</option>
+                    <option value="10:00" style="color: black;">10:00 AM</option>
+                    <option value="11:00" style="color: black;">11:00 AM</option>
+                    <option value="12:00" style="color: black;">12:00 PM</option>
+                    <option value="13:00" style="color: black;">01:00 PM</option>
+                    <option value="14:00" style="color: black;">02:00 PM</option>
+                    <option value="15:00" style="color: black;">03:00 PM</option>
+                    <option value="16:00" style="color: black;">04:00 PM</option>
+                    <option value="17:00" style="color: black;">05:00 PM</option>
+                    <option value="18:00" style="color: black;">06:00 PM</option>
+                    </select>
+                </div>
+                </div>
+                <button type="submit" class="booking-submit-btn">Book Villas Visit</button>
+            </form>
+            </div>
+        </div>
+        </div>
     </div>
 
-    <!-- Villas Section -->
-    <div id="villas-section" class="booking-property-section">
-      <div class="booking-content-wrapper">
-        <div class="booking-map-section">
-          <iframe 
-          style="height: 100%;"
-            class="booking-map-container"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.8216920381174!2d77.7494998!3d13.110479699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae05ce2feb0815%3A0xf045d44c3ec5d4c8!2zVHJpZmVjdGEgVmVyZGUgRW4gUmVzcGxhbmRvciAtIFRoaXJ1bWVuYWhhbGxpIOCypOCyv-CysOCzgeCyruCzh-CyqOCyueCys-CzjeCys-Cyvw!5e0!3m2!1sen!2sin!4v1759149186779!5m2!1sen!2sin"
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-        <div class="booking-form-section">
-          <div class="booking-location-badge"></div>
-          <form id="villasForm" onsubmit="submitVillasForm(event)">
-            <div class="booking-form-group">
-              <label class="booking-form-label">Your Name</label>
-              <input type="text" id="villas-name" class="booking-form-input" placeholder="Enter your full name" required>
-            </div>
-            <div class="booking-form-group">
-              <label class="booking-form-label">Your Email</label>
-              <input type="email" id="villas-email" class="booking-form-input" placeholder="Enter your email address" required>
-            </div>
-            <div class="booking-form-group">
-              <label class="booking-form-label">Your Mobile</label>
-              <div class="booking-phone-group">
-                <select id="villas-country-code" class="booking-form-input booking-country-code">
-                  <option value="+91">(IN) +91</option>
-                  <option value="+1">(US) +1</option>
-                  <option value="+44">(UK) +44</option>
-                  <option value="+61">(AU) +61</option>
-                </select>
-                <input type="tel" id="villas-phone" class="booking-form-input" placeholder="Enter your mobile number" required>
-              </div>
-            </div>
-            <div class="booking-form-group">
-              <label class="booking-form-label">Preferred Date & Time</label>
-              <div class="booking-date-time-group">
-                <input type="date" id="villas-date" class="booking-form-input booking-date-input" value="2025-09-26" required>
-                <select id="villas-time" class="booking-form-input booking-time-input" required>
-                  <option value="">Select Time</option>
-                  <option value="08:00" style="color: black;">08:00 AM</option>
-                  <option value="09:00" style="color: black;">09:00 AM</option>
-                  <option value="10:00" style="color: black;">10:00 AM</option>
-                  <option value="11:00" style="color: black;">11:00 AM</option>
-                  <option value="12:00" style="color: black;">12:00 PM</option>
-                  <option value="13:00" style="color: black;">01:00 PM</option>
-                  <option value="14:00" style="color: black;">02:00 PM</option>
-                  <option value="15:00" style="color: black;">03:00 PM</option>
-                  <option value="16:00" style="color: black;">04:00 PM</option>
-                  <option value="17:00" style="color: black;">05:00 PM</option>
-                  <option value="18:00" style="color: black;">06:00 PM</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="booking-submit-btn">Book Villas Visit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="successPopup" class="booking-success-popup">
-    <span id="popupMessage">✓ Form submitted successfully!</span>
-    <button class="booking-close-btn" onclick="closePopup()">&times;</button>
-  </div>
-
-
-<footer>
-    <div class="footer-top">
-      <!-- Address -->
-      <div class="footer-col">
-        <h3>Address</h3>
-        <p>
-          Trifecta Projects Pvt. Ltd. <br>
-            Trifecta Adatto, 11th Floor, Site No. 66/2. <br>
-            67/1.  Whitefield Main Road, Garudacharpalya, Mahadevpura Post, Bangalore 560048
-        </p>
-      </div>
-
-      <!-- Logo -->
-      <div class="footer-logo">
-        <!-- <p style="letter-spacing:3px; font-weight:500;">Trifecta</p> -->
-        <h2><img src="./icons/Trifecta-1080x1080-RGB-Logo-Transparency.png" class="logo" alt=""></h2>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <div class="footer-col">
-        <h3>Sales & Marketing</h3>
-        <p>+(91) 80502 86677</p>
-        <p>Others: +(91) 895 105 2233</p>
-        <p>Enquiry: <a href="mailto:enquiry@trifectaprojects.com">enquiry@trifectaprojects.com</a></p>
-        <p>Email: <a href="mailto:enquiry@info@trifectaprojects.com">info@trifectaprojects.com</a></p>
-      </div>
+    <div id="successPopup" class="booking-success-popup">
+        <span id="popupMessage">✓ Form submitted successfully!</span>
+        <button class="booking-close-btn" onclick="closePopup()">&times;</button>
     </div>
 
-    <!-- Disclaimer -->
-    <div class="footer-disclaimer">
-      RERA - PRM/KA/RERA/1251/446/PR/060424/006778<br>
-      RERA - PRM/KA/RERA/1251/446/PR/230125/007422<br>
-      Disclaimer: Any content mentioned on this website is for information purposes only and 
-      prices are subject to change without notice. This website is just for the purpose of 
-      information only and not to be considered as an official website.
-    </div>
-
-    <!-- Bottom -->
-    <div class="footer-bottom">
-      Copyright 2025 - Project by TRIFECTA
-    </div>
-</footer>
-
-<div class="popup-overlay" id="brochurePopup">
-  <div class="popup-container">
-    <button class="popup-close" onclick="closeBrochurePopup()">&times;</button>
-    <form class="popup-form" id="brochureDownloadForm" onsubmit="handleBrochureSubmit(event)">
-      <h3>Download Brochure & Floor Plans</h3>
-      
-      <div class="form-group">
-        <input type="text" placeholder="Your Name" required>
-      </div>
-      
-      <div class="form-group">
-        <input type="email" placeholder="Your Email" required>
-      </div>
-      
-      <div class="form-group">
-        <div class="phone-input">
-          <select class="country-code">
-            <option value="+91">(IN) +91</option>
-            <option value="+1">(US) +1</option>
-            <option value="+44">(UK) +44</option>
-          </select>
-          <input type="tel" placeholder="Your Mobile" required>
+    <footer>
+        <div class="footer-top">
+        <!-- Address -->
+        <div class="footer-col">
+            <h3>Address</h3>
+            <p>
+            Trifecta Projects Pvt. Ltd. <br>
+                Trifecta Adatto, 11th Floor, Site No. 66/2. <br>
+                67/1.  Whitefield Main Road, Garudacharpalya, Mahadevpura Post, Bangalore 560048
+            </p>
         </div>
-      </div>
-      
-      <div class="form-group checkbox-group">
-        <label>
-          <input type="checkbox" checked>
-          <span class="checkmark"></span>
-          I agree to receive updates via WhatsApp & Email.
-        </label>
-      </div>
-      
-      <div class="form-group">
-        <select required>
-          <option value="">Select Property Type</option>
-          <option value="rowhomes">4 BHK Rowhomes</option>
-          <option value="villas">4 BHK Villas</option>
-          <option value="both">Both Properties</option>
-        </select>
-      </div>
-      
-      <button type="submit" class="btn btn-form">Download Now</button>
-    </form>
-  </div>
-</div>
+
+        <!-- Logo -->
+        <div class="footer-logo">
+            <!-- <p style="letter-spacing:3px; font-weight:500;">Trifecta</p> -->
+            <h2><img src="./icons/Trifecta-1080x1080-RGB-Logo-Transparency.png" class="logo" alt=""></h2>
+            <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+            <h3>Sales & Marketing</h3>
+            <p>+(91) 80502 86677</p>
+            <p>Others: +(91) 895 105 2233</p>
+            <p>Enquiry: <a href="mailto:enquiry@trifectaprojects.com">enquiry@trifectaprojects.com</a></p>
+            <p>Email: <a href="mailto:enquiry@info@trifectaprojects.com">info@trifectaprojects.com</a></p>
+        </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="footer-disclaimer">
+        RERA - PRM/KA/RERA/1251/446/PR/060424/006778<br>
+        RERA - PRM/KA/RERA/1251/446/PR/230125/007422<br>
+        Disclaimer: Any content mentioned on this website is for information purposes only and 
+        prices are subject to change without notice. This website is just for the purpose of 
+        information only and not to be considered as an official website.
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+        Copyright 2025 - Project by TRIFECTA
+        </div>
+    </footer>
+
+    <div class="popup-overlay" id="brochurePopup">
+    <div class="popup-container">
+        <button class="popup-close" onclick="closeBrochurePopup()">&times;</button>
+        <form class="popup-form" id="brochureDownloadForm" onsubmit="handleBrochureSubmit(event)">
+        <h3>Download Brochure & Floor Plans</h3>
+        
+        <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+        </div>
+        
+        <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+        </div>
+        
+        <div class="form-group">
+            <div class="phone-input">
+            <select class="country-code">
+                <option value="+91">(IN) +91</option>
+                <option value="+1">(US) +1</option>
+                <option value="+44">(UK) +44</option>
+            </select>
+            <input type="tel" placeholder="Your Mobile" required>
+            </div>
+        </div>
+        
+        <div class="form-group checkbox-group">
+            <label>
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+            I agree to receive updates via WhatsApp & Email.
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <select required>
+            <option value="">Select Property Type</option>
+            <option value="rowhomes">4 BHK Rowhomes</option>
+            <option value="villas">4 BHK Villas</option>
+            <option value="both">Both Properties</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-form">Download Now</button>
+        </form>
+    </div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>

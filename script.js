@@ -306,29 +306,29 @@ const floorPlansData = {
         {
           image:
             "./images/plan-17.webp",
-          title: "North Facing - 3200 SQFT",
+          title: "East Facing - 3328 SQFT",
         },
         {
           image:
             "./images/plan-18.webp",
-          title: "North Facing - 3200 SQFT",
+          title: "West Facing - 3367 SQFT",
         },
         {
           image:
             "./images/plan-19.webp",
-          title: "North Facing - 3200 SQFT",
+          title: "West Facing - 2632 SQFT",
         },
       ],
       [
         {
           image:
             "./images/plan-20.webp",
-          title: "North Facing - 3700 SQFT",
+          title: "West Facing - 2915 SQFT",
         },
         {
           image:
             "./images/plan-21.webp",
-          title: "North Facing - 3700 SQFT",
+          title: "West Facing - 3125 SQFT",
         },
         // {
         //   image:
@@ -339,16 +339,16 @@ const floorPlansData = {
     ],
     tableData: [
       {
-        type: "4-BHK",
-        sba: "3030 Sqft",
-        price: "₹2.5 Cr*",
-        availability: "Limited",
+        type: "4BHK",
+        sba: "3328 Sqft",
+        price: "Call for Price",
+        // availability: "Limited",
       },
       {
-        type: "4.5-BHK",
-        sba: "3200 Sqft",
-        price: "₹2.7 Cr*",
-        availability: "Limited",
+        type: "4BHK",
+        sba: "3367 Sqft",
+        price: "Call for Price",
+        // availability: "Limited",
       },
     ],
   },
@@ -358,29 +358,29 @@ const floorPlansData = {
         {
           image:
             "./images/plan-22.webp",
-          title: "East Facing - 3200 SQFT",
+          title: "East Facing - 3419 SQFT",
         },
         {
           image:
             "./images/plan-23.webp",
-          title: "East Facing - 3200 SQFT",
+          title: "East Facing - 4043 SQFT",
         },
         {
           image:
             "./images/plan-24.webp",
-          title: "East Facing - 3200 SQFT",
+          title: "East Facing - 4523 SQFT",
         },
       ],
       [
         {
           image:
             "./images/plan-25.webp",
-          title: "East Facing - 3700 SQFT",
+          title: "West Facing - 2632 SQFT",
         },
         {
           image:
             "./images/plan-26.webp",
-          title: "East Facing - 3700 SQFT",
+          title: "East Facing - 3065 SQFT",
         },
         // {
         //   image:
@@ -391,22 +391,34 @@ const floorPlansData = {
     ],
     tableData: [
       {
-        type: "4-BHK",
-        sba: "3030 Sqft",
-        price: "₹2.5 Cr*",
-        availability: "Limited",
+        type: "4BHK",
+        sba: "2632 Sqft",
+        price: "Call for price",
+        // availability: "Limited",
       },
       {
-        type: "4.5-BHK",
-        sba: "3200 Sqft",
-        price: "₹2.7 Cr*",
-        availability: "Limited",
+        type: "4BHK",
+        sba: "2914 Sqft",
+        price: "Call for price",
+        // availability: "Limited",
       },
       {
-        type: "4.5-BHK",
-        sba: "3200 Sqft",
-        price: "₹2.7 Cr*",
-        availability: "Limited",
+        type: "4BHK",
+        sba: "3065 Sqft",
+        price: "Call for price",
+        // availability: "Limited",
+      },
+      {
+        type: "4BHK",
+        sba: "3712 Sqft",
+        price: "Call for price",
+        // availability: "Limited",
+      },
+      {
+        type: "4BHK",
+        sba: "3934 Sqft",
+        price: "Call for price",
+        // availability: "Limited",
       },
     ],
   },
@@ -458,7 +470,6 @@ function renderFloorPlanTable() {
                     <div class="table-cell" data-label="Type">${row.type}</div>
                     <div class="table-cell" data-label="SBA">${row.sba}</div>
                     <div class="table-cell" data-label="Price">${row.price}</div>
-                    <div class="table-cell" data-label="Availability">${row.availability}</div>
                 </div>`
     )
     .join("");
@@ -568,52 +579,66 @@ document.getElementById("floorPlanSlider").addEventListener("touchend", () => {
 });
 
 // galary section
-
+      
 // Interior showcase data
 const galleryInteriorData = {
   north: [
     {
       image:
-        "./images/gallery-04.webp",
+        "./Row Homes Images/Childrens-Play-Area.jpeg",
       title: "Living Room",
       description:
         "Spacious and modern living area with natural lighting and contemporary furnishing.",
     },
     {
       image:
-        "./images/gallery-05.webp",
+        "./Row Homes Images/East-Facing-Elevation-4-scaled.jpeg",
       title: "Dining Room",
       description:
         "Elegant dining space perfect for family gatherings and entertaining guests.",
     },
     {
       image:
-        "./images/gallery-06.webp",
+        "./Row Homes Images/East-Facing-Perspective-1-1-scaled.jpeg",
+      title: "Dining Room",
+      description:
+        "Elegant dining space perfect for family gatherings and entertaining guests.",
+    },
+    {
+      image:
+        "./Row Homes Images/East-Facing-Perspective-1-1-2048x1152.jpeg",
       title: "Master Bedroom",
       description:
         "Luxurious master suite with panoramic views and premium finishes.",
     },
     {
       image:
-        "./images/gallery-07.webp",
+        "./Row Homes Images/East-Facing-Perspective-1-scaled.jpeg",
       title: "Modern Kitchen",
       description:
         "State-of-the-art kitchen with high-end appliances and sleek design.",
     },
-    // {
-    //   image:
-    //     "./images/gallery-04.webp",
-    //   title: "Study Room",
-    //   description:
-    //     "Quiet and inspiring workspace with built-in storage and natural light.",
-    // },
-    // {
-    //   image:
-    //     "./images/gallery-04.webp",
-    //   title: "Bathroom",
-    //   description:
-    //     "Spa-like bathroom with premium fixtures and modern amenities.",
-    // },
+    {
+      image:
+        "./Row Homes Images/Entrance.jpeg",
+      title: "Modern Kitchen",
+      description:
+        "State-of-the-art kitchen with high-end appliances and sleek design.",
+    },
+    {
+      image:
+        "./Row Homes Images/view-3-scaled.jpeg",
+      title: "Modern Kitchen",
+      description:
+        "State-of-the-art kitchen with high-end appliances and sleek design.",
+    },
+    {
+      image:
+        "./Row Homes Images/West-Facing-Elevation-1-scaled.jpeg",
+      title: "Modern Kitchen",
+      description:
+        "State-of-the-art kitchen with high-end appliances and sleek design.",
+    },
   ],
   east: [
     {
@@ -644,20 +669,85 @@ const galleryInteriorData = {
       description:
         "Stylish entertainment area perfect for relaxation and social gatherings.",
     },
-    // {
-    //   image:
-    //     "./images/gallery-04.webp",
-    //   title: "Home Office",
-    //   description:
-    //     "Professional workspace with panoramic city views and modern technology.",
-    // },
-    // {
-    //   image:
-    //     "./images/gallery-04.webp",
-    //   title: "Master Bath",
-    //   description:
-    //     "Resort-style bathroom with soaking tub and rain shower experience.",
-    // },
+  ],
+  clubhouse: [
+    {
+      image:
+        "./Clubhouse Images/Club-Verdant-Aerial.jpeg",
+      title: "Main Clubhouse Lobby",
+      description:
+        "Grand entrance with sophisticated design and welcoming ambiance for residents.",
+    },
+    {
+      image:
+        "./Clubhouse Images/Club-Verdant-Reception-300x158.jpeg",
+      title: "Fitness Center",
+      description:
+        "State-of-the-art gym with modern equipment and panoramic views.",
+    },
+    {
+      image:
+        "./Clubhouse Images/Club-Verdant-Reception.jpeg",
+      title: "Swimming Pool",
+      description:
+        "Olympic-sized pool with temperature control and lounging areas.",
+    },
+    {
+      image:
+        "./Clubhouse Images/Club-Verdant-Side.jpeg",
+      title: "Recreation Lounge",
+      description:
+        "Multi-purpose space for events, parties, and social gatherings.",
+    },
+    {
+      image:
+        "./Clubhouse Images/Club-Verdant-Swimming-Pool-300x158.jpeg",
+      title: "Indoor Sports Arena",
+      description:
+        "Professional courts for basketball, badminton, and other indoor sports.",
+    },
+    {
+      image:
+        "./Clubhouse Images/Club-Verdant-Swimming-Pool.jpeg",
+      title: "Indoor Sports Arena",
+      description:
+        "Professional courts for basketball, badminton, and other indoor sports.",
+    },
+    {
+      image:
+        "./Clubhouse Images/IMG-20231006-WA0149.jpg",
+      title: "Indoor Sports Arena",
+      description:
+        "Professional courts for basketball, badminton, and other indoor sports.",
+    },
+    {
+      image:
+        "./Clubhouse Images/IMG-20231006-WA0151.jpg",
+      title: "Indoor Sports Arena",
+      description:
+        "Professional courts for basketball, badminton, and other indoor sports.",
+    },
+    {
+      image:
+        "./Clubhouse Images/IMG-20231006-WA0152.jpg",
+      title: "Indoor Sports Arena",
+      description:
+        "Professional courts for basketball, badminton, and other indoor sports.",
+    },
+    {
+      image:
+        "./Clubhouse Images/IMG-20231006-WA0153.jpg",
+      title: "Indoor Sports Arena",
+      description:
+        "Professional courts for basketball, badminton, and other indoor sports.",
+    },
+    {
+      image:
+        "./Clubhouse Images/IMG-20231006-WA0154.jpg",
+      title: "Indoor Sports Arena",
+      description:
+        "Professional courts for basketball, badminton, and other indoor sports.",
+    },
   ],
 };
 
@@ -951,23 +1041,27 @@ const propData = {
     description:
       "Step into a world where luxury embraces nature. With spacious layouts, elegant finishes, and serene surroundings, every home is a private sanctuary designed for those who seek sophistication and tranquility in equal measure. ",
     features: [
-      { label: "SPANNING", icon: "./icons/plot.svg", value: "2.5 Acres" },
-      { label: "ADORNING", icon: "./icons/nature.svg", value: "100+ TREES" },
-      { label: "CENTRAL COURTYARD", icon: "./icons/maximize.svg", value: "50,000 SqFt" },
-      { label: "SECURED", icon: "./icons/gate.svg", value: "GATED COMMUNITY" },
+      { label: "", icon: "./icons/plot.svg", value: "100+ Amenities" },
+      { label: "", icon: "./icons/nature.svg", value: "50,000 Sqft Multistorey Clubhouse" },
+      { label: "", icon: "./icons/maximize.svg", value: "60 % Open Green Space" },
+      { label: "", icon: "./icons/gate.svg", value: "27 Lush Parks for Leisure &amp; Recreation" },
     ],
     details: {
       top: [
-        { category: "EXCLUSIVE", icon: "", title: "49 Rowhomes " },
-        { category: "4 BHK", icon: "", title: "Triplex" },
-        { category: "BUILTUP", icon: "", title: "3030 Sqft Onwards" },
-        { category: "TERRACE GARDEN", icon: "", title: "300 SQ. FT" },
+        { category: "", icon: "", title: "Indoor Temperature Controlled pool" },
+        { category: "", icon: "", title: "Olympic Sized Swimming pool" },
+        { category: "", icon: "", title: "Provisioned with Ev Charging Points" },
+        { category: "", icon: "", title: "Rooftop Solar Systems" },
       ],
       bottom: [
-        { category: "Community", icon: "", title: "Clubhouse" },
-        // { category: "BACKYARD GARDEN", icon: "", title: "350 SQ. FT." },
-        // { category: "TERRACE GARDEN", icon: "", title: "700 SQ. FT." },
-        // { category: "COMMUNITY", icon: "", title: "Clubhouse" },
+        { category: "", icon: "", title: "The Club Verdent" },
+        // { category: "SWIMMING POOL", icon: "", title: "Private Pool" },
+        // { category: "ROOFTOP DECK", icon: "", title: "1200 SQ. FT." },
+        // {
+        //   category: "LUXURY AMENITIES",
+        //   icon: "",
+        //   title: "Resort-Style Living",
+        // },
       ],
     },
   },
@@ -977,20 +1071,20 @@ const propData = {
     description:
       "Experience the perfect harmony of luxury, elegance, and nature. Nestled in Budigere, Whitefield, these 4 BHK villas redefine upscale living with spacious layouts, modern aesthetics, lush gardens, and serene outdoor spaces — a private sanctuary for a truly elevated lifestyle.",
     features: [
-      { label: "SPANNING", icon: "./icons/plot.svg", value: "5.5 Acres" },
-      { label: "Adorning", icon: "./icons/nature.svg", value: "100+ TREES" },
-      { label: "Central Courtyard", icon: "./icons/maximize.svg", value: "50,000 SqFt" },
-      { label: "Secured", icon: "./icons/gate.svg", value: "GATED COMMUNITY" },
+      { label: "", icon: "./icons/plot.svg", value: "100+ Amenities" },
+      { label: "", icon: "./icons/nature.svg", value: "50,000 Sqft Multistorey Clubhouse" },
+      { label: "", icon: "./icons/maximize.svg", value: "60 % Open Green Space" },
+      { label: "", icon: "./icons/gate.svg", value: "27 Lush Parks for Leisure &amp; Recreation" },
     ],
     details: {
       top: [
-        { category: "EXCLUSIVE", icon: "", title: "153 Villas" },
-        { category: "4 BHK", icon: "", title: "Triplex" },
-        { category: "Builtup", icon: "", title: "3530 Sqft Onwards" },
-        { category: "Terrace Garden", icon: "", title: "400 SQ. FT." },
+        { category: "", icon: "", title: "Indoor Temperature Controlled pool" },
+        { category: "", icon: "", title: "Olympic Sized Swimming pool" },
+        { category: "", icon: "", title: "Provisioned with Ev Charging Points" },
+        { category: "", icon: "", title: "Rooftop Solar Systems" },
       ],
       bottom: [
-        { category: "Community", icon: "", title: "Clubhouse" },
+        { category: "", icon: "", title: "The Club Verdent" },
         // { category: "SWIMMING POOL", icon: "", title: "Private Pool" },
         // { category: "ROOFTOP DECK", icon: "", title: "1200 SQ. FT." },
         // {
@@ -1179,3 +1273,151 @@ function handleBrochureSubmit(event) {
     }, 2000);
   }, 1500);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// Create fullscreen modal HTML
+const fullscreenModal = document.createElement('div');
+fullscreenModal.id = 'fullscreenModal';
+fullscreenModal.innerHTML = `
+  <style>
+    #fullscreenModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.18);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px)
+    }
+    
+    #fullscreenModal.active {
+      display: flex;
+    }
+    
+    #fullscreenModal img {
+      max-width: 95%;
+      max-height: 95%;
+      object-fit: contain;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      background: white;
+    }
+    
+    #fullscreenModal .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #103c3b;
+      font-size: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      background: white;
+      border: none;
+      z-index: 10000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      line-height: 1;
+    }
+    
+    #fullscreenModal .close-btn:hover {
+      background: #d4933e;
+      color: white;
+      transform: scale(1.1);
+    }
+  </style>
+  <button class="close-btn" onclick="closeFullscreen()">&times;</button>
+  <img id="fullscreenImage" src="" alt="Floor Plan">
+`;
+document.body.appendChild(fullscreenModal);
+
+// Function to open fullscreen
+function openFullscreen(imageSrc) {
+  const modal = document.getElementById('fullscreenModal');
+  const img = document.getElementById('fullscreenImage');
+  img.src = imageSrc;
+  modal.classList.add('active');
+}
+
+// Function to close fullscreen
+function closeFullscreen() {
+  const modal = document.getElementById('fullscreenModal');
+  modal.classList.remove('active');
+}
+
+// Close on background click
+document.getElementById('fullscreenModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeFullscreen();
+  }
+});
+
+// Close on ESC key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeFullscreen();
+  }
+});
+
+// Update renderFloorPlanSlider to add click handlers
+function renderFloorPlanSlider() {
+  const slider = document.getElementById("floorPlanSlider");
+  const slides = floorPlansData[floorPlanCurrentFacing].slides;
+
+  slider.innerHTML = slides
+    .map(
+      (slide) =>
+        `<div class="floor-plan-slide">
+                    ${slide
+                      .map(
+                        (plan) =>
+                          `<div class="floor-plan-card">
+                            <img src="${plan.image}" alt="${plan.title}" class="floor-plan-image" onclick="openFullscreen('${plan.image}')">
+                            <div class="floor-plan-info">
+                                <h3 class="floor-plan-title">${plan.title}</h3>
+                            </div>
+                        </div>`
+                      )
+                      .join("")}
+                </div>`
+    )
+    .join("");
+
+  updateFloorPlanSliderPosition();
+}
+
+
+
+
+ function showPhase(phaseNumber) {
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.phase-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            buttons[phaseNumber - 1].classList.add('active');
+            
+            // Hide all phase contents
+            const phases = document.querySelectorAll('.phase-content');
+            phases.forEach(phase => phase.classList.remove('active'));
+            
+            // Show selected phase
+            document.getElementById('phase' + phaseNumber).classList.add('active');
+        }
