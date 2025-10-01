@@ -1,3 +1,5 @@
+// ===== FORM SUBMISSION FUNCTIONS =====
+
 function submitTrifectaPopupForm(formSelector, buttonSelector, noteSelector) {
   $(formSelector).submit(function (event) {
     event.preventDefault();
@@ -58,6 +60,63 @@ function submitTrifectaPopupForm(formSelector, buttonSelector, noteSelector) {
   });
 }
 
+function submitRowhomesForm(formSelector, buttonSelector, noteSelector) {
+  $(formSelector).submit(function (event) {
+    event.preventDefault();
+
+    // Disable button and show loading state
+    var originalText = $(buttonSelector).text();
+    $(buttonSelector).text("Please Wait...");
+    $(buttonSelector).attr("disabled", true);
+
+    // Gather form data
+    var formData = {
+      name: $(formSelector + ' [name="name"]').val(),
+      email: $(formSelector + ' [name="email"]').val(),
+      phoneCode: $(formSelector + ' [name="phoneCode"]').val(),
+      phoneNumber: $(formSelector + ' [name="phoneNumber"]').val(),
+      date: $(formSelector + ' [name="date"]').val(),
+      time: $(formSelector + ' [name="time"]').val(),
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "https://emailjsfuntions-428145106157.asia-south1.run.app/rowhomes-submit-form",
+      data: JSON.stringify(formData),
+      contentType: "application/json",
+      success: function (msg) {
+        $(buttonSelector).removeAttr("disabled").text(originalText);
+        var result;
+
+        if (msg === "Email sent successfully") {
+          result =
+            '<p style="color:green; font-weight: 600; font-size: 16px; width:100%">Booking request sent successfully!</p>';
+          $(noteSelector).delay(5000).fadeOut();
+          $(formSelector)[0].reset();
+        } else {
+          result =
+            '<p style="color:red; font-weight: 600; font-size: 16px; width:100%">' +
+            msg +
+            "</p>";
+        }
+
+        $(noteSelector).html(result).show();
+      },
+      error: function () {
+        $(buttonSelector).removeAttr("disabled").text(originalText);
+        $(noteSelector)
+          .html(
+            '<p style="color:red; font-weight: 600; font-size: 16px; width:100%">Error sending booking request!</p>'
+          )
+          .show();
+      },
+    });
+
+    return false;
+  });
+}
+
+// Initialize all forms when document is ready
 $(document).ready(function () {
   // Brochure popup form
   submitTrifectaPopupForm(
@@ -65,11 +124,21 @@ $(document).ready(function () {
     "#brochureDownloadForm button[type='submit']",
     "#brochureDownloadForm .form-note"
   );
+  
+  // Rowhomes booking form (villaments)
+  submitRowhomesForm(
+    "#villamentsForm",
+    "#villamentsForm button[type='submit']",
+    "#villamentsForm .booking-form-note"
+  );
+
+  // Villas booking form initialization
+  submitRowhomesForm(
+    "#villasForm",
+    "#villasForm button[type='submit']",
+    "#villasForm .booking-form-note"
+  );
 });
-
-
-
-
 
 
 
@@ -856,10 +925,6 @@ function renderGallerySlides() {
         `<div class="gallery-carousel-slide">
                     <img src="${slide.image}" alt="${slide.title}" class="gallery-slide-image">
                     <div class="gallery-slide-overlay"></div>
-                    <div class="gallery-slide-content">
-                        <h2 class="gallery-slide-title">${slide.title}</h2>
-                        <p class="gallery-slide-description">${slide.description}</p>
-                    </div>
                 </div>`
     )
     .join("");
@@ -1118,18 +1183,20 @@ function closePopup() {
 const today = new Date().toISOString().split("T")[0];
 document.getElementById("villaments-date").setAttribute("min", today);
 document.getElementById("villas-date").setAttribute("min", today);
+// ============================================
+// PROPERTY SHOWCASE SECTION (VILLAS & VILLAMENTS)
+// ============================================
 
-// Property data
 const propData = {
   villaments: {
     title: "Verde En Resplandor – Phase 3 Row Houses in Whitefield",
     description:
-      "Step into a world where luxury embraces nature. With spacious layouts, elegant finishes, and serene surroundings, every home is a private sanctuary designed for those who seek sophistication and tranquility in equal measure. ",
+      "Step into a world where luxury embraces nature. With spacious layouts, elegant finishes, and serene surroundings, every home is a private sanctuary designed for those who seek sophistication and tranquility in equal measure.",
     features: [
       { label: "", icon: "./icons/plot.svg", value: "100+ Amenities" },
       { label: "", icon: "./icons/nature.svg", value: "50,000 Sqft Multistorey Clubhouse" },
       { label: "", icon: "./icons/maximize.svg", value: "60 % Open Green Space" },
-      { label: "", icon: "./icons/gate.svg", value: "27 Lush Parks for Leisure &amp; Recreation" },
+      { label: "", icon: "./icons/gate.svg", value: "27 Lush Parks for Leisure & Recreation" },
     ],
     details: {
       top: [
@@ -1140,13 +1207,6 @@ const propData = {
       ],
       bottom: [
         { category: "", icon: "", title: "The Club Verdent" },
-        // { category: "SWIMMING POOL", icon: "", title: "Private Pool" },
-        // { category: "ROOFTOP DECK", icon: "", title: "1200 SQ. FT." },
-        // {
-        //   category: "LUXURY AMENITIES",
-        //   icon: "",
-        //   title: "Resort-Style Living",
-        // },
       ],
     },
   },
@@ -1159,7 +1219,7 @@ const propData = {
       { label: "", icon: "./icons/plot.svg", value: "100+ Amenities" },
       { label: "", icon: "./icons/nature.svg", value: "50,000 Sqft Multistorey Clubhouse" },
       { label: "", icon: "./icons/maximize.svg", value: "60 % Open Green Space" },
-      { label: "", icon: "./icons/gate.svg", value: "27 Lush Parks for Leisure &amp; Recreation" },
+      { label: "", icon: "./icons/gate.svg", value: "27 Lush Parks for Leisure & Recreation" },
     ],
     details: {
       top: [
@@ -1170,19 +1230,12 @@ const propData = {
       ],
       bottom: [
         { category: "", icon: "", title: "The Club Verdent" },
-        // { category: "SWIMMING POOL", icon: "", title: "Private Pool" },
-        // { category: "ROOFTOP DECK", icon: "", title: "1200 SQ. FT." },
-        // {
-        //   category: "LUXURY AMENITIES",
-        //   icon: "",
-        //   title: "Resort-Style Living",
-        // },
       ],
     },
   },
 };
 
-let propCurrentType = "villaments";
+let propCurrentType = "villas"; // Changed to match HTML active button
 let propDetailsVisible = false;
 
 function propShowContent(type) {
@@ -1200,69 +1253,66 @@ function propRenderContent() {
   const data = propData[propCurrentType];
   const contentArea = document.getElementById("prop-content-area");
 
+  if (!contentArea) return; // Safety check
+
   const detailsHTML = propDetailsVisible
     ? `
-                <div class="prop-details-section prop-active">
-                    <div class="prop-details-grid">
-                        ${data.details.top
-                          .map(
-                            (item) => `
-                            <div class="prop-detail-item">
-                                <div class="prop-detail-category">${item.category}</div>
-                                <div class="prop-detail-icon">${item.icon}</div>
-                                <div class="prop-detail-title">${item.title}</div>
-                            </div>
-                        `
-                          )
-                          .join("")}
-                    </div>
-                    <div class="prop-details-grid-bottom">
-                        ${data.details.bottom
-                          .map(
-                            (item) => `
-                            <div class="prop-detail-item">
-                                <div class="prop-detail-category">${item.category}</div>
-                                <div class="prop-detail-icon">${item.icon}</div>
-                                <div class="prop-detail-title">${item.title}</div>
-                            </div>
-                        `
-                          )
-                          .join("")}
-                    </div>
-                </div>
+      <div class="prop-details-section prop-active">
+        <div class="prop-details-grid">
+          ${data.details.top
+            .map(
+              (item) => `
+              <div class="prop-detail-item">
+                <div class="prop-detail-category">${item.category}</div>
+                <div class="prop-detail-icon">${item.icon}</div>
+                <div class="prop-detail-title">${item.title}</div>
+              </div>
             `
+            )
+            .join("")}
+        </div>
+        <div class="prop-details-grid-bottom">
+          ${data.details.bottom
+            .map(
+              (item) => `
+              <div class="prop-detail-item">
+                <div class="prop-detail-category">${item.category}</div>
+                <div class="prop-detail-icon">${item.icon}</div>
+                <div class="prop-detail-title">${item.title}</div>
+              </div>
+            `
+            )
+            .join("")}
+        </div>
+      </div>
+    `
     : "";
 
   contentArea.innerHTML = `
-                
-                <h1 class="prop-main-title">${data.title}</h1>
-                
-                <p class="prop-description">${data.description}</p>
-                
-                <div class="prop-features-grid">
-                    ${data.features
-                      .map(
-                        (feature) => `
-                        <div class="prop-feature">
-                            <div class="prop-feature-label">${feature.label}</div>
-                            <img src='${feature.icon}' class="prop-feature-icon special-icons"></img>
-                            <div class="prop-feature-value">${feature.value}</div>
-                        </div>
-                    `
-                      )
-                      .join("")}
-                </div>
-                
-                <button class="prop-view-btn" onclick="propToggleDetails()">
-                    ${
-                      propDetailsVisible
-                        ? "HIDE EXCLUSIVES"
-                        : "VIEW ALL EXCLUSIVES"
-                    }
-                </button>
-                
-                ${detailsHTML}
-            `;
+    <h1 class="prop-main-title">${data.title}</h1>
+    
+    <p class="prop-description">${data.description}</p>
+    
+    <div class="prop-features-grid">
+      ${data.features
+        .map(
+          (feature) => `
+          <div class="prop-feature">
+            <div class="prop-feature-label">${feature.label}</div>
+            <img src='${feature.icon}' class="prop-feature-icon special-icons" alt="feature icon">
+            <div class="prop-feature-value">${feature.value}</div>
+          </div>
+        `
+        )
+        .join("")}
+    </div>
+    
+    <button class="prop-view-btn" onclick="propToggleDetails()">
+      ${propDetailsVisible ? "HIDE EXCLUSIVES" : "VIEW ALL EXCLUSIVES"}
+    </button>
+    
+    ${detailsHTML}
+  `;
 }
 
 function propToggleDetails() {
@@ -1272,20 +1322,23 @@ function propToggleDetails() {
   if (propDetailsVisible) {
     // Smooth scroll to details
     setTimeout(() => {
-      document.querySelector(".prop-details-section").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      const detailsSection = document.querySelector(".prop-details-section");
+      if (detailsSection) {
+        detailsSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     }, 100);
   }
 }
 
-// Initialize on page load
+// Initialize property section on page load
 document.addEventListener("DOMContentLoaded", function () {
-  propRenderContent();
+  if (document.getElementById("prop-content-area")) {
+    propRenderContent();
+  }
 });
-
-
 
 
 

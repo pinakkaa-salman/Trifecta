@@ -208,7 +208,8 @@
                                 <span>RERA Approved</span>
                             </div>
                             <div class="badge">
-                                <span>Only <strong>49</strong> Units Available</span>
+                                <!-- <span>Only <strong>49</strong> Units Available</span> -->
+                                 <span>Premium <strong>Villas</strong> are Available</span>
                             </div>
                         </div>
                     </div>
@@ -219,10 +220,10 @@
             <!-- Toggle Buttons at Top -->
             <div class="prop-toggle-buttons">
                 
-                <button class="prop-toggle-btn" onclick="propShowContent('villas')">
+                <button class="prop-toggle-btn prop-active" onclick="propShowContent('villas')">
                     Luxury Villas
                 </button>
-                <button class="prop-toggle-btn prop-active" onclick="propShowContent('villaments')">
+                <button class="prop-toggle-btn" onclick="propShowContent('villaments')">
                    Luxury Rowhomes 
                 </button>
             </div>
@@ -1009,47 +1010,48 @@
             </div>
             <div class="booking-form-section">
             <div class="booking-location-badge"></div>
-            <form id="villamentsForm" onsubmit="submitVillamentsForm(event)">
+            <form id="villamentsForm"  method="POST" action="https://emailjsfuntions-428145106157.asia-south1.run.app/rowhomes-submit-form" >
                 <div class="booking-form-group">
                 <label class="booking-form-label">Your Name</label>
-                <input type="text" id="villaments-name" class="booking-form-input" placeholder="Enter your full name" required>
+                <input type="text" name="name" id="villaments-name" class="booking-form-input" placeholder="Enter your full name" required>
                 </div>
                 <div class="booking-form-group">
                 <label class="booking-form-label">Your Email</label>
-                <input type="email" id="villaments-email" class="booking-form-input" placeholder="Enter your email address" required>
+                <input type="email" name="email" id="villaments-email" class="booking-form-input" placeholder="Enter your email address" required>
                 </div>
                 <div class="booking-form-group">
                 <label class="booking-form-label">Your Mobile</label>
                 <div class="booking-phone-group">
-                    <select id="villaments-country-code" class="booking-form-input booking-country-code">
+                    <select name="phoneCode" id="villaments-country-code" class="booking-form-input booking-country-code">
                     <option value="+91">(IN) +91</option>
                     <option value="+1">(US) +1</option>
                     <option value="+44">(UK) +44</option>
                     <option value="+61">(AU) +61</option>
                     </select>
-                    <input type="tel" id="villaments-phone" class="booking-form-input" placeholder="Enter your mobile number" required>
+                    <input type="tel"  name="phoneNumber"  id="villaments-phone" class="booking-form-input" placeholder="Enter your mobile number" required>
                 </div>
                 </div>
                 <div class="booking-form-group">
                 <label class="booking-form-label">Preferred Date & Time</label>
                 <div class="booking-date-time-group">
-                    <input type="date" id="villaments-date" class="booking-form-input booking-date-input" value="2025-09-26" required>
-                    <select id="villaments-time" class="booking-form-input booking-time-input" required>
-                    <option value="">Select Time</option>
-                    <option value="08:00" style="color: black;">08:00 AM</option>
-                    <option value="09:00" style="color: black;">09:00 AM</option>
-                    <option value="10:00" style="color: black;">10:00 AM</option>
-                    <option value="11:00" style="color: black;">11:00 AM</option>
-                    <option value="12:00" style="color: black;">12:00 PM</option>
-                    <option value="13:00" style="color: black;">01:00 PM</option>
-                    <option value="14:00" style="color: black;">02:00 PM</option>
-                    <option value="15:00" style="color: black;">03:00 PM</option>
-                    <option value="16:00" style="color: black;">04:00 PM</option>
-                    <option value="17:00" style="color: black;">05:00 PM</option>
-                    <option value="18:00" style="color: black;">06:00 PM</option>
+                    <input type="date" name="date" id="villaments-date" class="booking-form-input booking-date-input" required>
+                    <select  name="time" id="villaments-time" class="booking-form-input booking-time-input" required>
+                        <option value="">Select Time</option>
+                        <option value="08:00" style="color: black;">08:00 AM</option>
+                        <option value="09:00" style="color: black;">09:00 AM</option>
+                        <option value="10:00" style="color: black;">10:00 AM</option>
+                        <option value="11:00" style="color: black;">11:00 AM</option>
+                        <option value="12:00" style="color: black;">12:00 PM</option>
+                        <option value="13:00" style="color: black;">01:00 PM</option>
+                        <option value="14:00" style="color: black;">02:00 PM</option>
+                        <option value="15:00" style="color: black;">03:00 PM</option>
+                        <option value="16:00" style="color: black;">04:00 PM</option>
+                        <option value="17:00" style="color: black;">05:00 PM</option>
+                        <option value="18:00" style="color: black;">06:00 PM</option>
                     </select>
                 </div>
                 </div>
+                <div class="booking-form-note" style="display: none"></div>
                 <button type="submit" class="booking-submit-btn">Book Rowhomes  Visit</button>
             </form>
             </div>
@@ -1071,49 +1073,55 @@
             </div>
             <div class="booking-form-section">
             <div class="booking-location-badge"></div>
-            <form id="villasForm" onsubmit="submitVillasForm(event)">
-                <div class="booking-form-group">
-                <label class="booking-form-label">Your Name</label>
-                <input type="text" id="villas-name" class="booking-form-input" placeholder="Enter your full name" required>
-                </div>
-                <div class="booking-form-group">
-                <label class="booking-form-label">Your Email</label>
-                <input type="email" id="villas-email" class="booking-form-input" placeholder="Enter your email address" required>
-                </div>
-                <div class="booking-form-group">
-                <label class="booking-form-label">Your Mobile</label>
-                <div class="booking-phone-group">
-                    <select id="villas-country-code" class="booking-form-input booking-country-code">
-                    <option value="+91">(IN) +91</option>
-                    <option value="+1">(US) +1</option>
-                    <option value="+44">(UK) +44</option>
-                    <option value="+61">(AU) +61</option>
-                    </select>
-                    <input type="tel" id="villas-phone" class="booking-form-input" placeholder="Enter your mobile number" required>
-                </div>
-                </div>
-                <div class="booking-form-group">
-                <label class="booking-form-label">Preferred Date & Time</label>
-                <div class="booking-date-time-group">
-                    <input type="date" id="villas-date" class="booking-form-input booking-date-input" value="2025-09-26" required>
-                    <select id="villas-time" class="booking-form-input booking-time-input" required>
-                    <option value="">Select Time</option>
-                    <option value="08:00" style="color: black;">08:00 AM</option>
-                    <option value="09:00" style="color: black;">09:00 AM</option>
-                    <option value="10:00" style="color: black;">10:00 AM</option>
-                    <option value="11:00" style="color: black;">11:00 AM</option>
-                    <option value="12:00" style="color: black;">12:00 PM</option>
-                    <option value="13:00" style="color: black;">01:00 PM</option>
-                    <option value="14:00" style="color: black;">02:00 PM</option>
-                    <option value="15:00" style="color: black;">03:00 PM</option>
-                    <option value="16:00" style="color: black;">04:00 PM</option>
-                    <option value="17:00" style="color: black;">05:00 PM</option>
-                    <option value="18:00" style="color: black;">06:00 PM</option>
-                    </select>
-                </div>
-                </div>
-                <button type="submit" class="booking-submit-btn">Book Villas Visit</button>
-            </form>
+            <form id="villasForm" method="POST" action="https://emailjsfuntions-428145106157.asia-south1.run.app/villas-submit-form">
+    <div class="booking-form-group">
+        <label class="booking-form-label">Your Name</label>
+        <input type="text"  id="villas-name" name="name" class="booking-form-input" placeholder="Enter your full name" required>
+    </div>
+    
+    <div class="booking-form-group">
+        <label class="booking-form-label">Your Email</label>
+        <input type="email"  id="villas-email"  name="email" class="booking-form-input" placeholder="Enter your email address" required>
+    </div>
+    
+    <div class="booking-form-group">
+        <label class="booking-form-label">Your Mobile</label>
+        <div class="booking-phone-group">
+            <select  id="villas-country-code" name="phoneCode" class="booking-form-input booking-country-code">
+                <option value="+91">(IN) +91</option>
+                <option value="+1">(US) +1</option>
+                <option value="+44">(UK) +44</option>
+                <option value="+61">(AU) +61</option>
+            </select>
+            <input  id="villas-phone" type="tel" name="phoneNumber" class="booking-form-input" placeholder="Enter your mobile number" required>
+        </div>
+    </div>
+    
+    <div class="booking-form-group">
+        <label class="booking-form-label">Preferred Date & Time</label>
+        <div class="booking-date-time-group">
+            <input type="date" id="villas-date" name="date" class="booking-form-input booking-date-input" required>
+            <select  id="villas-time" name="time" class="booking-form-input booking-time-input" required>
+                <option value="">Select Time</option>
+                <option value="08:00 AM" style="color: black;">08:00 AM</option>
+                <option value="09:00 AM" style="color: black;">09:00 AM</option>
+                <option value="10:00 AM" style="color: black;">10:00 AM</option>
+                <option value="11:00 AM" style="color: black;">11:00 AM</option>
+                <option value="12:00 PM" style="color: black;">12:00 PM</option>
+                <option value="01:00 PM" style="color: black;">01:00 PM</option>
+                <option value="02:00 PM" style="color: black;">02:00 PM</option>
+                <option value="03:00 PM" style="color: black;">03:00 PM</option>
+                <option value="04:00 PM" style="color: black;">04:00 PM</option>
+                <option value="05:00 PM" style="color: black;">05:00 PM</option>
+                <option value="06:00 PM" style="color: black;">06:00 PM</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="booking-form-note" style="display: none"></div>
+    
+    <button type="submit" class="booking-submit-btn">Book Villas Visit</button>
+</form>
             </div>
         </div>
         </div>
