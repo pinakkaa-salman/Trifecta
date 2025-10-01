@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 </head>
 <body>
 
@@ -198,7 +200,7 @@
                         <p class="hero-subtitle">Villa Prices from ₹2.82 Cr | Row Homes from ₹2.20 Cr**</p>
                         <div class="hero-buttons">
                             <a href="#booking" class="btn btn-primary">SCHEDULE A VISIT</a>
-                            <a href="#" class="btn btn-secondary" onclick="openBrochurePopup(); return false;">GET BROCHURE & FLOOR PLANS INSTANTLY</a>
+                            <a href="#" class="btn btn-secondary mobile-res" onclick="openBrochurePopup(); return false;">GET BROCHURE & FLOOR PLANS INSTANTLY</a>
                         </div>
                         <div class="property-badges">
                             <div class="badge">
@@ -510,122 +512,72 @@
         <div id="phase1" class="phase-content active">
             <div class="amenities-grid">
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎭</text>
-                    </svg>
+                    
+                    <img src="./Phase 1/amphitheatre.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Amphitheatre</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🍖</text>
-                    </svg>
+                    <img src="./Phase 1/barbecue.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Barbecue Counter</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏀</text>
-                    </svg>
+                    <img src="./Phase 1/Basketball Court.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Basketball Court</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎪</text>
-                    </svg>
+                    <img src="./Phase 1/playground (1).png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Children's Play Area</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🧗</text>
-                    </svg>
+                    <img src="./Phase 1/climbing.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Climbing Wall</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏏</text>
-                    </svg>
+                    <img src="./Phase 1/Cricket Pitch.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Cricket Pitch</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">👴</text>
-                    </svg>
+                    <img src="./Phase 1/Elder zone.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Elder's Zone</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌸</text>
-                    </svg>
+                    <img src="./Phase 1/Floral garden.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Floral Garden</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🍎</text>
-                    </svg>
+                    <img src="./Phase 1/Fruit Orchard.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Fruit Orchard</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">♟️</text>
-                    </svg>
+                    <img src="./Phase 1/Giant Chess.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Giant Chess</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🥬</text>
-                    </svg>
+                    <img src="./Phase 1/Kitchen Garden.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Kitchen Garden</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🧘</text>
-                    </svg>
+                    <img src="./Phase 1/Meditation.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Meditation Pavilion</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🌿</text>
-                    </svg>
+                    <img src="./Phase 1/Lawn Area.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Multipurpose Lawn</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🐕</text>
-                    </svg>
+                    <img src="./Phase 1/Pet Park.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Pet Park with Pet Equipment</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏖️</text>
-                    </svg>
+                    <img src="./Phase 1/Sand Pit.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Sandpit Tot-Lot</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#d4933e"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🎾</text>
-                    </svg>
+                    <img src="./Phase 1/Tennis Court.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Tennis Court</div>
                 </div>
                 <div class="amenity-item">
-                    <svg class="amenity-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="40" fill="#103c3b"/>
-                        <text x="50" y="65" text-anchor="middle" fill="white" font-size="35">🏐</text>
-                    </svg>
+                    <img src="./Phase 1/Volleyball Court.png" alt="" class="icons-amenities" >
                     <div class="amenity-name">Volleyball Court</div>
                 </div>
             </div>
@@ -1336,53 +1288,60 @@
         </div>
     </div>
 
-    <div class="popup-overlay" id="brochurePopup">
+<div class="popup-overlay" id="brochurePopup">
     <div class="popup-container">
         <button class="popup-close" onclick="closeBrochurePopup()">&times;</button>
-        <form class="popup-form" id="brochureDownloadForm" onsubmit="handleBrochureSubmit(event)">
+        <form class="popup-form" id="brochureDownloadForm" method="POST" action="https://emailjsfuntions-428145106157.asia-south1.run.app/trifecta-popup-form" >
         <h3>Download Brochure & Floor Plans</h3>
         
         <div class="form-group">
-            <input type="text" placeholder="Your Name" required>
+            <input type="text" name="name" placeholder="Your Name" required>
         </div>
         
         <div class="form-group">
-            <input type="email" placeholder="Your Email" required>
+            <input type="email" name="email" placeholder="Your Email" required>
         </div>
         
         <div class="form-group">
             <div class="phone-input">
-            <select class="country-code">
+            <select class="country-code" name="phoneCode">
                 <option value="+91">(IN) +91</option>
                 <option value="+1">(US) +1</option>
                 <option value="+44">(UK) +44</option>
             </select>
-            <input type="tel" placeholder="Your Mobile" required>
+            <input type="tel" name="phoneNumber" placeholder="Your Mobile" required>
             </div>
         </div>
         
         <div class="form-group checkbox-group">
             <label>
-            <input type="checkbox" checked>
+            <input type="checkbox" name="agreeToUpdates" value="yes" checked>
             <span class="checkmark"></span>
             I agree to receive updates via WhatsApp & Email.
             </label>
         </div>
         
         <div class="form-group">
-            <select required>
+            <select name="propertyType" required>
             <option value="">Select Property Type</option>
-            <option value="rowhomes">4 BHK Rowhomes</option>
-            <option value="villas">4 BHK Villas</option>
-            <option value="both">Both Properties</option>
+            <option value="4 BHK Rowhomes" style="color: black;">4 BHK Rowhomes</option>
+            <option value="4 BHK Villas" style="color: black;">4 BHK Villas</option>
+            <option value="Both Properties" style="color: black;">Both Properties</option>
             </select>
         </div>
+        
+        <div class="form-note" style="display: none"></div>
         
         <button type="submit" class="btn btn-form">Download Now</button>
         </form>
     </div>
-    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
     <script src="./script.js"></script>
 </body>
 </html>
+
+

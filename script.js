@@ -1,3 +1,88 @@
+function submitTrifectaPopupForm(formSelector, buttonSelector, noteSelector) {
+  $(formSelector).submit(function (event) {
+    event.preventDefault();
+
+    // Disable button and show loading state
+    $(buttonSelector).text("Please Wait...");
+    $(buttonSelector).attr("disabled", true);
+
+    // Gather form data
+    var formData = {
+      name: $(formSelector + ' [name="name"]').val(),
+      email: $(formSelector + ' [name="email"]').val(),
+      phoneCode: $(formSelector + ' [name="phoneCode"]').val(),
+      phoneNumber: $(formSelector + ' [name="phoneNumber"]').val(),
+      propertyType: $(formSelector + ' [name="propertyType"]').val(),
+      agreeToUpdates: $(formSelector + ' [name="agreeToUpdates"]').is(':checked') ? 'yes' : 'no',
+    };
+
+    $.ajax({
+      type: "POST",
+      url: "https://emailjsfuntions-428145106157.asia-south1.run.app/trifecta-popup-form",
+      data: JSON.stringify(formData),
+      contentType: "application/json",
+      success: function (msg) {
+        $(buttonSelector).removeAttr("disabled").text("Download Now");
+        var result;
+
+        if (msg === "Email sent successfully") {
+          result =
+            '<p style="color:green; font-weight: 600; font-size: 16px; width:100%">Request Sent Successfully! Check your email.</p>';
+          $(noteSelector).delay(5000).fadeOut();
+          $(formSelector)[0].reset();
+          
+          // Optional: Close popup after successful submission
+          setTimeout(function() {
+            closeBrochurePopup();
+          }, 2000);
+        } else {
+          result =
+            '<p style="color:red; font-weight: 600; font-size: 16px; width:100%">' +
+            msg +
+            "</p>";
+        }
+
+        $(noteSelector).html(result).show();
+      },
+      error: function () {
+        $(buttonSelector).removeAttr("disabled").text("Download Now");
+        $(noteSelector)
+          .html(
+            '<p style="color:red; font-weight: 600; font-size: 16px; width:100%">Error sending request!</p>'
+          )
+          .show();
+      },
+    });
+
+    return false;
+  });
+}
+
+$(document).ready(function () {
+  // Brochure popup form
+  submitTrifectaPopupForm(
+    "#brochureDownloadForm",
+    "#brochureDownloadForm button[type='submit']",
+    "#brochureDownloadForm .form-note"
+  );
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // navbar section
 
 // Scroll Effect

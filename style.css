@@ -2010,7 +2010,7 @@ body {
 
 .la-amenity-item {
   padding: 8px 0;
-  color: #555;
+  color: #ffffff;
   font-size: 0.85rem;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -3278,3 +3278,655 @@ input[type="time"] {
                 gap: 10px;
             }
         }
+
+
+        /* ============================================
+   MOBILE RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+/* Tablets and Small Laptops (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .prop-toggle-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  .mp-image {
+    height: 50vh;
+  }
+}
+
+/* Mobile Landscape and Portrait (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo-wrapper {
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .logo-long {
+    height: 40px;
+    width: 80px;
+  }
+
+  /* Hero Section */
+  .slider-container-main {
+    height: auto;
+    min-height: 70vh;
+    margin-top: 3.5rem;
+  }
+
+  .overiew-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px !important;
+    font-size: 0.85rem;
+  }
+
+  .property-badges {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  /* Property Toggle Section */
+  .prop-main-section {
+    padding: 40px 15px;
+  }
+
+  .prop-toggle-buttons {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .prop-toggle-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+    width: auto;
+  }
+
+  .prop-main-title {
+    font-size: 2rem;
+  }
+
+  .prop-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .prop-details-grid,
+  .prop-details-grid-bottom {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Master Plan */
+  .mp-container {
+    padding: 0 15px;
+  }
+
+  .mp-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .mp-image {
+    height: 40vh;
+  }
+
+  .mp-toggle-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  /* Floor Plans */
+  .floor-plans-container {
+    padding: 30px 15px;
+  }
+
+  .main-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .facing-buttons {
+    gap: 10px;
+  }
+
+  .facing-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .floor-plan-slide {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .floor-plan-card {
+    max-width: 100%;
+  }
+
+  .floor-plan-nav {
+    display: none;
+  }
+
+  /* Gallery */
+  .gallery-showcase-title {
+    font-size: 2rem;
+  }
+
+  .gallery-face-toggle {
+    flex-wrap: wrap;
+    padding: 4px;
+  }
+
+  .gallery-face-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .gallery-carousel-container {
+    height: 350px;
+    border-radius: 10px;
+  }
+
+  .gallery-carousel-nav {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  /* Amenities */
+  .amenities-title {
+    font-size: 2rem;
+  }
+
+  .amenities-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .phase-buttons {
+    gap: 10px;
+  }
+
+  .phase-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .amenity-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .amenity-name {
+    font-size: 0.85rem;
+  }
+
+  /* Clubhouse */
+  .container {
+    grid-template-columns: 1fr;
+    margin: 3rem auto;
+  }
+
+  .left-section {
+    padding: 40px 25px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .amenities-title {
+    font-size: 1.3rem;
+  }
+
+  .right-section img {
+    width: 100%;
+  }
+
+  /* Location */
+  .la-location-advantages {
+    padding: 20px 15px;
+    max-width: 95%;
+  }
+
+  .la-section-title {
+    font-size: 2rem;
+  }
+
+  .la-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .la-map-image {
+    height: 250px;
+  }
+
+  /* Booking */
+  .booking-container {
+    padding: 30px 15px;
+  }
+
+  .booking-main-title {
+    font-size: 2rem;
+  }
+
+  .booking-toggle-buttons {
+    gap: 10px;
+  }
+
+  .booking-toggle-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .booking-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 15px;
+  }
+
+  .booking-phone-group,
+  .booking-date-time-group {
+    flex-direction: column;
+  }
+
+  .booking-country-code {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-center {
+    border: none;
+    padding: 20px 0;
+  }
+
+  .disclaimer-text {
+    margin-top: 1rem;
+  }
+
+  .logos-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    padding: 10px 15px;
+    width: 100vw;
+  }
+
+  .logo {
+    height: 35px;
+    width: 35px;
+  }
+
+  .logo-long {
+    height: 35px;
+    width: 70px;
+  }
+
+  /* Hero Section */
+  .slider-container-main {
+    height: auto;
+    /* min-height: 60vh; */
+    margin-top: 0rem;
+    padding: 0;
+  }
+  .slider-container-main{
+    background-image: url(./Villa\ Creatives/Website\ Villa\ Offer\ Creative.jpg);
+  }
+
+  .overiew-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    width: 90vw;
+  }
+  
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .btn {
+    padding: 10px 16px !important;
+    font-size: 0.8rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
+  .mobile-res{
+    width: 100vw !important;
+  }
+
+  /* Property Section */
+  .prop-main-section {
+    padding: 30px 10px;
+  }
+
+  .prop-toggle-btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .prop-main-title {
+    font-size: 1.6rem;
+  }
+
+  .prop-features-grid,
+  .prop-details-grid,
+  .prop-details-grid-bottom {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Master Plan */
+  .mp-title {
+    font-size: 1.6rem;
+  }
+
+  .mp-image {
+    height: 30vh;
+  }
+
+  .mp-toggle-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  /* Floor Plans */
+  .floor-plans-container {
+    padding: 20px 10px;
+  }
+
+  .main-title {
+    font-size: 1.6rem;
+  }
+
+  .facing-btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .selection-title {
+    font-size: 1.3rem;
+  }
+
+  .get-pricing-btn {
+    padding: 12px 25px;
+    font-size: 13px;
+  }
+
+  /* Gallery */
+  .gallery-showcase-title {
+    font-size: 1.6rem;
+  }
+
+  .gallery-face-btn {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+
+  .gallery-carousel-container {
+    height: 280px;
+  }
+
+  .gallery-carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .gallery-carousel-nav.gallery-prev {
+    left: 10px;
+  }
+
+  .gallery-carousel-nav.gallery-next {
+    right: 10px;
+  }
+
+  /* Amenities */
+  .amenities-section {
+    padding: 30px 10px;
+  }
+
+  .amenities-title {
+    font-size: 1.6rem;
+  }
+
+  .amenities-subtitle {
+    font-size: 1rem;
+  }
+
+  .phase-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .amenity-item {
+    padding: 15px 10px;
+  }
+
+  .amenity-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .amenity-name {
+    font-size: 0.75rem;
+  }
+
+  /* Clubhouse */
+  .container {
+    margin: 2rem auto;
+  }
+
+  .left-section {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .amenity-item {
+    font-size: 0.7rem;
+  }
+
+  /* Location */
+  .la-section-title {
+    font-size: 1.6rem;
+  }
+
+  .la-map-image {
+    height: 200px;
+  }
+
+  .la-amenity-title {
+    font-size: 0.85rem;
+  }
+
+  .la-amenity-item {
+    font-size: 0.8rem;
+  }
+
+  /* Booking */
+  .booking-main-title {
+    font-size: 1.6rem;
+  }
+
+  .booking-toggle-btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .booking-form-label {
+    font-size: 11px;
+  }
+
+  .booking-form-input {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .booking-submit-btn {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 15px 10px;
+  }
+
+  .address {
+    font-size: 0.85rem;
+  }
+
+  .disclaimer-title {
+    font-size: 0.9rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.75rem;
+  }
+
+  .rera-numbers div {
+    font-size: 0.55rem;
+  }
+
+  .website-link {
+    font-size: 0.7rem;
+  }
+
+  /* Popup */
+  .popup-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .popup-form h3 {
+    font-size: 1.2rem;
+  }
+
+  .floating {
+    bottom: 25px;
+    right: 15px;
+    width: auto;
+  }
+
+  .floating .btn {
+    padding: 10px 15px !important;
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .prop-main-title {
+    font-size: 1.4rem;
+  }
+
+  .main-title,
+  .gallery-showcase-title,
+  .amenities-title,
+  .la-section-title,
+  .booking-main-title {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+    padding: 8px 14px !important;
+  }
+}
+
+
+.icons-amenities{
+  height: 50px;
+  width: 50px;
+}
+
+
