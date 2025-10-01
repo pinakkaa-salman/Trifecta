@@ -1622,4 +1622,11 @@ function renderFloorPlanSlider() {
             
             // Show selected phase
             document.getElementById('phase' + phaseNumber).classList.add('active');
-        }
+}
+
+
+
+
+
+
+  
