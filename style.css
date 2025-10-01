@@ -292,7 +292,7 @@ body {
 
 .slide1-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    /* url("./images/Website\ Villa\ Offer\ Creative\ 628.jpg"); */
+    url("./images/Website\ Villa\ Offer\ Creative\ 628.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -300,7 +300,7 @@ body {
 
 .slide2-bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    /* url("./images/Website\ Villa\ Offer\ Creative\ 628.jpg"); */
+    url("./images/Website\ Villa\ Offer\ Creative\ 628.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
