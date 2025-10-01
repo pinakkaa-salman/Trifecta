@@ -12,6 +12,7 @@
         rel="stylesheet">
 </head>
 <body>
+
     <nav class="navbar" id="navbar">
         <div class="logo-wrapper">
             <img src="./icons/Trifecta-1080x1080-RGB-Logo-Transparency.png" alt="" class="logo">
@@ -35,7 +36,9 @@
         </div>
     </nav>
 
-    <div class="slider-container-main"></div>
+    <div class="slider-container-main">
+        <a href="#booking" class="btn btn-primary floating" onclick="openBrochurePopup(); return false;">SCHEDULE A VISIT</a>
+    </div>
 
     <!-- <div class="slider-container">
 
@@ -1274,54 +1277,64 @@
         <button class="booking-close-btn" onclick="closePopup()">&times;</button>
     </div>
 
-    <footer>
-        <div class="footer-top">
-        <!-- Address -->
-        <div class="footer-col">
-            <h3>Address</h3>
-            <p>
-            Trifecta Projects Pvt. Ltd. <br>
-                Trifecta Adatto, 11th Floor, Site No. 66/2. <br>
-                67/1.  Whitefield Main Road, Garudacharpalya, Mahadevpura Post, Bangalore 560048
-            </p>
-        </div>
+     <div class="footer">
+        <div class="footer-container">
+            <!-- Left Section -->
+            <div class="footer-left">
+                <div class="project-logo">
+                    <img src="./images/TVER 1080 RGB Logo - Transparency.png" alt="" class="logo-long">
+                </div>
+                <div class="address">
+                    Trifecta verde en resplandor Mandur post, Thirumenahalli, Bengaluru, Karnataka 560049
+                </div>
+            </div>
 
-        <!-- Logo -->
-        <div class="footer-logo">
-            <!-- <p style="letter-spacing:3px; font-weight:500;">Trifecta</p> -->
-            <h2><img src="./icons/Trifecta-1080x1080-RGB-Logo-Transparency.png" class="logo" alt=""></h2>
-            <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <!-- Center Section -->
+            <div class="footer-center">
+                <div class="disclaimer-title">Disclaimer</div>
+                <div class="disclaimer-text">
+                    This is not the official website. The content provided on this page is for informational purposes only. 
+                    For the most accurate and up-to-date information regarding the project, please visit the official website 
+                    or contact us directly. All images shown are for representational purposes. The developer reserves the 
+                    right to add / delete / modify / upgrade any specifications or features without prior notice.
+                </div>
+                <!-- <div class="rera-info">
+                    <div class="rera-phase"><strong>Phase-1</strong> Villa: PRM/KA/RERA/1250/304/PR/210319/004025 | Row Homes: PRM/KA/RERA/1250/304/PR/200323/003374</div>
+                    <div class="rera-phase"><strong>Phase-2</strong> Villa: PRM/KA/RERA/1250/304/PR/101122/005447 | Row Homes: PRM/KA/RERA/1250/304/PR/200922/005254</div>
+                    <div class="rera-phase"><strong>Phase-3</strong> Villa: PRM/KA/RERA/1251/446/PR/230125/007424 | Row Homes: PRM/KA/RERA/1251/446/PR/060424/006778</div>
+                </div> -->
+            </div>
+
+            <!-- Right Section -->
+            <div class="footer-right">
+                <div class="logos-container">
+                    <div class="logo-box">
+                        <!-- <div class="credai-logo"> -->
+                            <img src="./icons/Trifecta-1080x1080-RGB-Logo-Transparency.png" alt="" class="logo">  
+                        <!-- </div> -->
+                    </div>
+                    <!-- <div class="logo-box">
+                        <div class="company-logo">COMPANY<br>LOGO</div>
+                    </div> -->
+                </div>
+                <div class="rera-numbers">
+                    <div><strong>Phase-1</strong></div>
+                    <div>Villa: PRM/KA/RERA/1250/304/PR/210319/004025</div>
+                    <div>Row Homes: PRM/KA/RERA/1250/304/PR/200323/003374</div>
+                    <div><strong>Phase-2</strong></div>
+                    <div>Villa: PRM/KA/RERA/1250/304/PR/101122/005447</div>
+                    <div>Row Homes: PRM/KA/RERA/1250/304/PR/200922/005254</div>
+                    <div><strong>Phase-3</strong></div>
+                    <div>Villa: PRM/KA/RERA/1251/446/PR/230125/007424</div>
+                    <div>Row Homes: PRM/KA/RERA/1251/446/PR/060424/006778</div>
+                </div>
             </div>
         </div>
 
-        <!-- Contact -->
-        <div class="footer-col">
-            <h3>Sales & Marketing</h3>
-            <p>+(91) 80502 86677</p>
-            <p>Others: +(91) 895 105 2233</p>
-            <p>Enquiry: <a href="mailto:enquiry@trifectaprojects.com">enquiry@trifectaprojects.com</a></p>
-            <p>Email: <a href="mailto:enquiry@info@trifectaprojects.com">info@trifectaprojects.com</a></p>
+        <div class="website-link">
+            @ All Rights Received @ Trifecta Project Private Limited
         </div>
-        </div>
-
-        <!-- Disclaimer -->
-        <div class="footer-disclaimer">
-        RERA - PRM/KA/RERA/1251/446/PR/060424/006778<br>
-        RERA - PRM/KA/RERA/1251/446/PR/230125/007422<br>
-        Disclaimer: Any content mentioned on this website is for information purposes only and 
-        prices are subject to change without notice. This website is just for the purpose of 
-        information only and not to be considered as an official website.
-        </div>
-
-        <!-- Bottom -->
-        <div class="footer-bottom">
-        Copyright 2025 - Project by TRIFECTA
-        </div>
-    </footer>
+    </div>
 
     <div class="popup-overlay" id="brochurePopup">
     <div class="popup-container">
