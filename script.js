@@ -116,6 +116,68 @@ function submitRowhomesForm(formSelector, buttonSelector, noteSelector) {
   });
 }
 
+function submitVillasForm(formSelector, buttonSelector, noteSelector) {
+  document.querySelector(formSelector).addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Disable button and show loading state
+    const button = document.querySelector(buttonSelector);
+    const originalText = button.textContent;
+    button.textContent = "Please Wait...";
+    button.disabled = true;
+
+    // Gather form data
+    const formData = {
+      name: document.querySelector(formSelector + ' [name="name"]').value,
+      email: document.querySelector(formSelector + ' [name="email"]').value,
+      phoneCode: document.querySelector(formSelector + ' [name="phoneCode"]').value,
+      phoneNumber: document.querySelector(formSelector + ' [name="phoneNumber"]').value,
+      date: document.querySelector(formSelector + ' [name="date"]').value,
+      time: document.querySelector(formSelector + ' [name="time"]').value,
+    };
+
+    // Send AJAX request
+    fetch("https://emailjsfuntions-428145106157.asia-south1.run.app/villas-submit-form", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(response => response.text())
+      .then(msg => {
+        button.disabled = false;
+        button.textContent = originalText;
+        
+        const noteElement = document.querySelector(noteSelector);
+        let result;
+
+        if (msg === "Email sent successfully") {
+          result = '<p style="color:green; font-weight: 600; font-size: 16px; width:100%">Booking request sent successfully!</p>';
+          setTimeout(() => {
+            noteElement.style.display = 'none';
+          }, 5000);
+          document.querySelector(formSelector).reset();
+        } else {
+          result = '<p style="color:red; font-weight: 600; font-size: 16px; width:100%">' + msg + '</p>';
+        }
+
+        noteElement.innerHTML = result;
+        noteElement.style.display = 'block';
+      })
+      .catch(error => {
+        button.disabled = false;
+        button.textContent = originalText;
+        
+        const noteElement = document.querySelector(noteSelector);
+        noteElement.innerHTML = '<p style="color:red; font-weight: 600; font-size: 16px; width:100%">Error sending booking request!</p>';
+        noteElement.style.display = 'block';
+      });
+  });
+}
+
+// Initialize the form
+
 // Initialize all forms when document is ready
 $(document).ready(function () {
   // Brochure popup form
@@ -138,6 +200,8 @@ $(document).ready(function () {
     "#villasForm button[type='submit']",
     "#villasForm .booking-form-note"
   );
+  
+// submitVillasForm('#villasForm', '.booking-submit-btn', '.booking-form-note');
 });
 
 
