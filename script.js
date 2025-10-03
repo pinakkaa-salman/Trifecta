@@ -60,6 +60,11 @@ function submitTrifectaPopupForm(formSelector, buttonSelector, noteSelector) {
   });
 }
 
+
+
+
+
+
 function submitRowhomesForm(formSelector, buttonSelector, noteSelector) {
   $(formSelector).submit(function (event) {
     event.preventDefault();
@@ -195,7 +200,7 @@ $(document).ready(function () {
   );
 
   // Villas booking form initialization
-  submitRowhomesForm(
+  submitVillasForm(
     "#villasForm",
     "#villasForm button[type='submit']",
     "#villasForm .booking-form-note"
