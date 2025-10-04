@@ -692,7 +692,7 @@ function renderFloorPlanTable() {
         `<div class="table-row">
                     <div class="table-cell" data-label="Type">${row.type}</div>
                     <div class="table-cell" data-label="SBA">${row.sba}</div>
-                    <div class="table-cell" data-label="Price">${row.price}</div>
+                    <a href="#" class="table-cell" data-label="Price" onclick="openBrochurePopup(); return false;">${row.price}</a>
                 </div>`
     )
     .join("");
